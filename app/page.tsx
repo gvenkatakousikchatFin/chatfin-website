@@ -25,24 +25,26 @@ export default function Home() {
                 Home
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium font-poppins relative group">
-                Customers
+              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium font-poppins relative group flex items-center">
+                Products
+                <span className="ml-1">▾</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium font-poppins relative group">
-                Changelog
+                Solutions
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium font-poppins relative group flex items-center">
+                Partners
+                <span className="ml-1">▾</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium font-poppins relative group">
-                About
+                Pricing
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium font-poppins relative group">
-                Careers
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium font-poppins relative group">
-                Docs
+                Blog
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
               </a>
             </nav>
@@ -77,8 +79,7 @@ Teams
           </h1>
 
           <p className="text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
-            Bring your financial data to life through real-time AI-powered analysis, reporting, and forecasting to drive
-            better business decisions.
+            When generic AI tools like ChatGPT, Co-pilot, or your existing software fall short of everyday dynamic finance tasks, ChatFin delivers
           </p>
 
           {/* CTA Buttons */}
