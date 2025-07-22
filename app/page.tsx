@@ -11,36 +11,41 @@ export default function Home() {
       <div className="absolute bottom-1/4 left-1/3 w-[500px] h-[500px] bg-gradient-to-r from-[#135142]/5 via-[#10b875]/5 to-[#135142]/5 rounded-full blur-[150px] animate-pulse" style={{ animationDuration: '25s' }}></div>
       <div className="absolute bottom-0 right-0 w-full h-[300px] bg-gradient-to-t from-[#ebfff5]/30 to-transparent"></div>
       {/* Navigation */}
-      <header className="relative z-50 border-b border-gray-100/50 bg-white/90 backdrop-blur-xl">
+      <header className="relative z-50 border-b border-gray-100/50 bg-white/95 backdrop-blur-xl sticky top-0">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <Image src="/chatfin-logo.jpeg" alt="ChatFin Logo" width={150} height={40} className="h-8 w-auto" />
+              <Image src="/chatfin-logo.jpeg" alt="ChatFin Logo" width={150} height={40} className="h-9 w-auto" />
             </div>
 
             {/* Navigation Links */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium">
+              <a href="#" className="text-[#135142] hover:text-[#10b875] transition-colors text-sm font-medium border-b-2 border-[#135142] pb-1 font-poppins relative group">
+                Home
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium font-poppins relative group">
                 Customers
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium">
+              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium font-poppins relative group">
                 Changelog
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium">
+              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium font-poppins relative group">
                 About
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium">
+              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium font-poppins relative group">
                 Careers
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium">
+              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium font-poppins relative group">
                 Docs
-              </a>
-              <a href="#" className="text-gray-600 hover:text-[#135142] transition-colors text-sm font-medium">
-                Login
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#135142] to-[#10b875] transition-all duration-300 group-hover:w-full"></span>
               </a>
             </nav>
-
             {/* CTA Button */}
             <Button className="hidden md:flex bg-gradient-to-r from-[#135142] to-[#10b875] hover:from-[#0d3b30] hover:to-[#0e9963] text-white border-0 px-6 py-3 rounded-xl text-sm font-semibold shadow-lg shadow-[#135142]/25 hover:shadow-xl hover:shadow-[#135142]/30 transform hover:scale-105 transition-all duration-200 group">
               <span className="flex items-center gap-2">
@@ -54,16 +59,7 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Rating Badge */}
-        <div className="pt-6">
-          <div className="flex items-center space-x-2 text-sm">
-            <div className="flex items-center space-x-1 text-red-600 bg-red-50 px-3 py-1 rounded-full">
-              <Star className="w-4 h-4 fill-current" />
-              <span className="font-medium">G2.com 4.8/5 stars</span>
-            </div>
-          </div>
-        </div>
-
+       
         {/* Hero Section */}
         <div className="text-center mt-16 mb-12 relative">
           <div className="absolute inset-0 bg-gradient-radial from-[#f0fff7]/80 via-transparent to-transparent rounded-3xl -z-10"></div>
@@ -74,9 +70,10 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#135142] mb-6 leading-tight">
-            Analyze every financial
+            One AI Super Agent 
             <br />
-            decision in seconds
+             for Finance  
+Teams
           </h1>
 
           <p className="text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
