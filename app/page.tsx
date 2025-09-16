@@ -280,7 +280,6 @@ export default function Home() {
                     <p className="text-gray-600 dark:text-gray-300">Real-time financial reporting with predictive analytics and custom dashboards.</p>
                   </div>
                 </div>
-
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Users className="w-5 h-5 text-[#135142] dark:text-green-400" />
