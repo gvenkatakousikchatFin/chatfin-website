@@ -15,17 +15,19 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
-      animation: {
-        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'float': 'float 8s ease-in-out infinite',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        }
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
       },
   		colors: {
+        // ChatFin brand colors
+        'chatfin': {
+          'primary': '#00ff85',
+          'primary-hover': '#00e673',
+          'primary-active': '#00cc66',
+          'dark-bg-primary': '#0a1a1f',
+          'dark-bg-secondary': '#101a1f',
+          'dark-bg-tertiary': '#1a2429',
+        },
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -83,6 +85,18 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        gradientShift: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
   			'accordion-down': {
   				from: {
   					height: '0'
@@ -101,6 +115,10 @@ const config: Config = {
   			}
   		},
   		animation: {
+        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float': 'float 8s ease-in-out infinite',
+        'gradient-shift': 'gradientShift 3s ease infinite',
+        'fade-in-up': 'fadeInUp 0.8s ease-out',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
   		}

@@ -1,0 +1,445 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ChatFin Dark Theme Design Schema",
+  "description": "Complete design system for ChatFin's dark theme including colors, typography, spacing, and component styles",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "theme": {
+      "type": "object",
+      "properties": {
+        "name": "dark",
+        "mode": "dark",
+        "colors": {
+          "type": "object",
+          "properties": {
+            "primary": {
+              "type": "object",
+              "properties": {
+                "brand": "#00ff85",
+                "brandHover": "#00e673",
+                "brandActive": "#00cc66",
+                "brandRgba": "rgba(0, 255, 133, 1)"
+              }
+            },
+            "background": {
+              "type": "object",
+              "properties": {
+                "primary": "#0a1a1f",
+                "secondary": "#101a1f",
+                "tertiary": "#1a2429",
+                "radialGradient": "radial-gradient(circle at 50% 50%, rgba(0, 255, 133, 0.05) 0%, transparent 70%)"
+              }
+            },
+            "text": {
+              "type": "object",
+              "properties": {
+                "primary": "#ffffff",
+                "secondary": "rgba(255, 255, 255, 0.85)",
+                "muted": "rgba(255, 255, 255, 0.7)",
+                "onButton": "#0a1a1f"
+              }
+            },
+            "gradients": {
+              "type": "object",
+              "properties": {
+                "primary": "linear-gradient(135deg, #ffffff 0%, #00ff85 100%)",
+                "text": "linear-gradient(135deg, #ffffff 0%, #00ff85 100%)",
+                "shine": "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent)"
+              }
+            },
+            "shadows": {
+              "type": "object",
+              "properties": {
+                "primary": "0 8px 25px rgba(0, 255, 133, 0.3)",
+                "hover": "0 12px 35px rgba(0, 255, 133, 0.4)",
+                "active": "0 4px 15px rgba(0, 255, 133, 0.4)",
+                "card": "0 4px 24px rgba(0, 255, 133, 0.08)"
+              }
+            }
+          }
+        },
+        "typography": {
+          "type": "object",
+          "properties": {
+            "fontFamily": {
+              "primary": "'Poppins', sans-serif",
+              "fallback": "sans-serif"
+            },
+            "fontWeights": {
+              "light": 300,
+              "regular": 400,
+              "semibold": 600,
+              "bold": 700,
+              "extrabold": 800
+            },
+            "fontSizes": {
+              "xs": "0.8rem",
+              "sm": "0.9rem",
+              "base": "1rem",
+              "lg": "1.1rem",
+              "xl": "1.25rem",
+              "2xl": "1.6rem",
+              "3xl": "2rem",
+              "4xl": "2.3rem",
+              "5xl": "2.5rem",
+              "6xl": "2.8rem",
+              "7xl": "3.2rem",
+              "8xl": "3.4rem"
+            },
+            "lineHeights": {
+              "tight": 1.1,
+              "snug": 1.2,
+              "normal": 1.5,
+              "relaxed": 1.6,
+              "loose": 1.7
+            },
+            "letterSpacing": {
+              "tight": "-0.025em",
+              "normal": "0",
+              "wide": "0.025em",
+              "wider": "0.05em",
+              "widest": "0.5px"
+            }
+          }
+        },
+        "spacing": {
+          "type": "object",
+          "properties": {
+            "xs": "0.25rem",
+            "sm": "0.5rem",
+            "md": "1rem",
+            "lg": "1.5rem",
+            "xl": "2rem",
+            "2xl": "2.5rem",
+            "3xl": "3rem",
+            "4xl": "4rem"
+          }
+        },
+        "borderRadius": {
+          "type": "object",
+          "properties": {
+            "sm": "8px",
+            "md": "16px",
+            "lg": "24px",
+            "full": "50px"
+          }
+        },
+        "breakpoints": {
+          "type": "object",
+          "properties": {
+            "xs": "375px",
+            "sm": "480px",
+            "md": "768px",
+            "lg": "1024px",
+            "xl": "1200px"
+          }
+        },
+        "animations": {
+          "type": "object",
+          "properties": {
+            "duration": {
+              "fast": "0.3s",
+              "normal": "0.5s",
+              "slow": "0.8s",
+              "gradient": "3s"
+            },
+            "easing": {
+              "ease": "ease",
+              "easeOut": "ease-out",
+              "easeIn": "ease-in",
+              "easeInOut": "ease-in-out"
+            },
+            "keyframes": {
+              "fadeInUp": {
+                "from": {
+                  "opacity": 0,
+                  "transform": "translateY(30px)"
+                },
+                "to": {
+                  "opacity": 1,
+                  "transform": "translateY(0)"
+                }
+              },
+              "gradientShift": {
+                "0%": { "backgroundPosition": "0% 50%" },
+                "50%": { "backgroundPosition": "100% 50%" },
+                "100%": { "backgroundPosition": "0% 50%" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "type": "object",
+      "properties": {
+        "hero": {
+          "type": "object",
+          "properties": {
+            "container": {
+              "display": "flex",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "position": "relative",
+              "color": "white",
+              "fontFamily": "'Poppins', sans-serif",
+              "background": "radial-gradient(circle at 50% 50%, rgba(0, 255, 133, 0.05) 0%, transparent 70%)"
+            },
+            "content": {
+              "maxWidth": "100%",
+              "width": "100%",
+              "textAlign": "center",
+              "zIndex": 1,
+              "position": "relative",
+              "animation": "fadeInUp 0.8s ease-out"
+            },
+            "heading": {
+              "fontSize": "2.5rem",
+              "fontWeight": 800,
+              "lineHeight": 1.2,
+              "marginBottom": "2rem",
+              "display": "flex",
+              "flexDirection": "column",
+              "gap": "0.25rem"
+            },
+            "gradientText": {
+              "background": "linear-gradient(135deg, #ffffff 0%, #00ff85 100%)",
+              "webkitBackgroundClip": "text",
+              "backgroundClip": "text",
+              "webkitTextFillColor": "transparent",
+              "color": "transparent",
+              "display": "block",
+              "textShadow": "0 0 30px rgba(0, 255, 133, 0.3)",
+              "backgroundSize": "200% 200%",
+              "animation": "gradientShift 3s ease infinite"
+            }
+          }
+        },
+        "button": {
+          "type": "object",
+          "properties": {
+            "primary": {
+              "background": "linear-gradient(135deg, #ffffff 0%, #00ff85 100%)",
+              "color": "#0a1a1f",
+              "border": "none",
+              "padding": "1rem 2rem",
+              "fontSize": "1rem",
+              "fontWeight": 600,
+              "borderRadius": "50px",
+              "cursor": "pointer",
+              "transition": "all 0.3s ease",
+              "textTransform": "uppercase",
+              "letterSpacing": "0.5px",
+              "boxShadow": "0 8px 25px rgba(0, 255, 133, 0.3)",
+              "position": "relative",
+              "overflow": "hidden",
+              "minHeight": "48px",
+              "minWidth": "160px"
+            },
+            "hover": {
+              "transform": "translateY(-3px)",
+              "boxShadow": "0 12px 35px rgba(0, 255, 133, 0.4)"
+            },
+            "active": {
+              "transform": "translateY(-1px)"
+            }
+          }
+        },
+        "card": {
+          "type": "object",
+          "properties": {
+            "background": "#101a1f",
+            "borderRadius": "16px",
+            "padding": "2rem 1.5rem",
+            "boxShadow": "0 4px 24px rgba(0, 255, 133, 0.08)",
+            "color": "#fff",
+            "maxWidth": "700px",
+            "margin": "2rem auto"
+          }
+        }
+      }
+    },
+    "responsive": {
+      "type": "object",
+      "properties": {
+        "mobile": {
+          "type": "object",
+          "properties": {
+            "xs": {
+              "maxWidth": "375px",
+              "hero": {
+                "padding": "4rem 1rem 1rem 1rem",
+                "minHeight": "100vh",
+                "heading": {
+                  "fontSize": "1.6rem",
+                  "gap": "0.3rem",
+                  "marginBottom": "1.5rem",
+                  "lineHeight": 1.1
+                },
+                "subheading": {
+                  "fontSize": "0.9rem",
+                  "lineHeight": 1.5,
+                  "padding": "0 0.5rem"
+                },
+                "button": {
+                  "padding": "0.7rem 1.4rem",
+                  "fontSize": "0.8rem",
+                  "minWidth": "120px",
+                  "minHeight": "40px"
+                }
+              }
+            },
+            "sm": {
+              "minWidth": "376px",
+              "maxWidth": "480px",
+              "hero": {
+                "padding": "4rem 1.5rem 1.5rem 1.5rem",
+                "minHeight": "100vh",
+                "heading": {
+                  "fontSize": "2rem",
+                  "gap": "0.4rem",
+                  "marginBottom": "1.5rem"
+                },
+                "subheading": {
+                  "fontSize": "1rem"
+                },
+                "button": {
+                  "padding": "0.8rem 1.6rem",
+                  "fontSize": "0.9rem",
+                  "minWidth": "130px",
+                  "minHeight": "42px"
+                }
+              }
+            }
+          }
+        },
+        "tablet": {
+          "type": "object",
+          "properties": {
+            "md": {
+              "minWidth": "768px",
+              "hero": {
+                "padding": "3rem 2rem",
+                "minHeight": "70vh",
+                "content": {
+                  "maxWidth": "800px"
+                },
+                "heading": {
+                  "fontSize": "2.8rem",
+                  "marginBottom": "2rem",
+                  "gap": "0.5rem"
+                },
+                "subheading": {
+                  "fontSize": "1.25rem",
+                  "maxWidth": "700px"
+                }
+              }
+            }
+          }
+        },
+        "desktop": {
+          "type": "object",
+          "properties": {
+            "lg": {
+              "minWidth": "1024px",
+              "hero": {
+                "padding": "4rem 2rem",
+                "minHeight": "60vh",
+                "content": {
+                  "maxWidth": "1000px"
+                },
+                "heading": {
+                  "fontSize": "3.2rem",
+                  "marginBottom": "1.5rem"
+                },
+                "subheading": {
+                  "fontSize": "1.28rem",
+                  "maxWidth": "800px"
+                }
+              }
+            },
+            "xl": {
+              "minWidth": "1200px",
+              "hero": {
+                "content": {
+                  "maxWidth": "1200px"
+                },
+                "heading": {
+                  "fontSize": "3.4rem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "accessibility": {
+      "type": "object",
+      "properties": {
+        "reducedMotion": {
+          "animations": "none",
+          "transitions": "none"
+        },
+        "highContrast": {
+          "gradientText": {
+            "background": "white",
+            "webkitBackgroundClip": "text",
+            "backgroundClip": "text",
+            "webkitTextFillColor": "transparent"
+          },
+          "button": {
+            "background": "#00ff85",
+            "border": "2px solid white"
+          }
+        },
+        "touchDevices": {
+          "buttonHover": "none",
+          "buttonActive": {
+            "transform": "scale(0.98)",
+            "boxShadow": "0 4px 15px rgba(0, 255, 133, 0.4)"
+          }
+        },
+        "minTargetSize": {
+          "button": {
+            "minHeight": "48px",
+            "minWidth": "160px"
+          }
+        }
+      }
+    },
+    "seo": {
+      "type": "object",
+      "properties": {
+        "structuredData": {
+          "softwareApplication": {
+            "context": "https://schema.org",
+            "type": "SoftwareApplication",
+            "name": "ChatFin AI Finance Agent",
+            "description": "AI agents built to handle real work across Controllership, FP&A, AP, AR, Tax, Treasury and operations",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Web-based"
+          },
+          "product": {
+            "context": "https://schema.org",
+            "type": "Product",
+            "name": "ChatFin AI Agent",
+            "description": "Automates finance and accounting workflows for FP&A, AP, AR, Tax, Treasury.",
+            "brand": "ChatFin"
+          },
+          "organization": {
+            "context": "https://schema.org",
+            "type": "Organization",
+            "name": "ChatFin",
+            "description": "AI finance agents for accounting teams, controllership, FP&A, accounts payable, accounts receivable, tax, treasury operations"
+          }
+        },
+        "meta": {
+          "title": "AI Super Agent for Finance and Accounting Teams | ChatFin - AI Agents for FP&A, Controllership, AP, AR",
+          "description": "AI agents built for finance and accounting teams. Handle real work across Controllership, FP&A, AP, AR, Tax, Treasury and operations with our AI super agent for finance.",
+          "keywords": "ai finance, ai accounting, ai agents for finance, ai for accounting, finance ai tool, accounting ai agent, sap agents, ai for financial, controllership ai, fp&a ai, accounts payable ai, accounts receivable ai, treasury ai, tax ai, finance automation"
+        }
+      }
+    }
+  }
+}
