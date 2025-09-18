@@ -29,8 +29,14 @@ export default function Home() {
 
             {/* Navigation Links */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-[#135142] dark:text-white hover:text-[#10b875] transition-colors text-sm font-medium border-b-2 border-[#135142] dark:border-white pb-1 relative group">
+              <a href="/" className="text-[#135142] dark:text-white hover:text-[#10b875] transition-colors text-sm font-medium border-b-2 border-[#135142] dark:border-white pb-1 relative group">
                 Home
+              </a>
+              <a href="/home2" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
+                Home2
+              </a>
+              <a href="/home3" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
+                Home3
               </a>
               <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group flex items-center">
                 Products
