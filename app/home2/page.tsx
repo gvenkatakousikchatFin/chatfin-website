@@ -13,7 +13,7 @@ export default function Home2() {
     }
 
     const handleBookDemo = () => {
-        router.push('/book-demo')
+        router.push('/book-demo/home2')
     }
 
     const handleIndividualDemo = () => {
@@ -25,7 +25,7 @@ export default function Home2() {
     }
 
     return (
-        <div className="min-h-screen bg-white dark:bg-gray-900">
+        <div className="min-h-screen bg-white dark:bg-gray-900 font-['Poppins',sans-serif]">
             {/* Navigation */}
             <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,20 +38,13 @@ export default function Home2() {
                         {/* Navigation Links */}
                         <nav className="hidden md:flex items-center space-x-8">
                             <a href="/" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium">
-                                Home
+                                Home1
                             </a>
                             <a href="/home2" className="text-[#135142] dark:text-white hover:text-[#10b875] transition-colors text-sm font-medium border-b-2 border-[#135142] dark:border-white pb-1">
                                 Home2
                             </a>
-                            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium">
+                            <a href="/home3" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium">
                                 Home3
-                            </a>
-                            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium flex items-center">
-                                Products
-                                <ChevronRight className="ml-1 w-3 h-3" />
-                            </a>
-                            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium">
-                                Pricing
                             </a>
                         </nav>
 

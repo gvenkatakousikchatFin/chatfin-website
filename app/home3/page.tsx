@@ -13,7 +13,7 @@ export default function Home3() {
     }
 
     const handleBookDemo = () => {
-        router.push('/book-demo')
+        router.push('/book-demo/home3')
     }
 
     const handleIndividualDemo = () => {
@@ -25,43 +25,32 @@ export default function Home3() {
     }
 
     return (
-        <div className="min-h-screen bg-black text-white overflow-x-hidden">
+        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white overflow-x-hidden font-['Poppins',sans-serif]">
             {/* Navigation */}
-            <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-xl border-b border-gray-800">
+            <header className="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border-b border-gray-200 dark:border-gray-700">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
                         {/* Logo */}
                         <div className="flex items-center">
-                            <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-400 rounded-lg mr-3"></div>
-                            <h1 className="text-xl font-bold text-white">ChatFin</h1>
+                            <h1 className="text-2xl font-bold text-[#135142] dark:text-white">ChatFin</h1>
                         </div>
 
                         {/* Navigation Links */}
                         <nav className="hidden md:flex items-center space-x-8">
-                            <a href="/" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
-                                Home
+                            <a href="/" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium">
+                                Home1
                             </a>
-                            <a href="/home2" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
+                            <a href="/home2" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium">
                                 Home2
                             </a>
-                            <a href="/home3" className="text-white font-medium text-sm border-b border-green-400 pb-1">
+                            <a href="/home3" className="text-[#135142] dark:text-white font-medium text-sm border-b-2 border-[#135142] dark:border-white pb-1">
                                 Home3
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-medium flex items-center">
-                                Products
-                                <ChevronDown className="ml-1 w-3 h-3" />
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
-                                Pricing
                             </a>
                         </nav>
 
                         {/* Theme Toggle & CTA */}
                         <div className="flex items-center gap-4">
                             <ThemeToggle />
-                            <Button className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white rounded-lg px-4 py-2 text-sm">
-                                Get Started
-                            </Button>
                         </div>
                     </div>
                 </div>

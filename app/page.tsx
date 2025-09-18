@@ -214,20 +214,12 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Demo Left */}
             <div className="relative">
-              <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 border border-gray-200 dark:border-gray-700 shadow-2xl">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="ml-4 text-sm text-gray-500 dark:text-gray-400 font-mono">Enterprise Dashboard</span>
-                </div>
-                <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden">
-                  <img
-                    src="https://i.postimg.cc/cJGbtHG1/Navy-Geometric-Business-Webinar-Instagram-Post-8.png"
-                    alt="ChatFin Enterprise Dashboard"
-                    className="w-full h-[300px] object-cover"
-                  />
-                </div>
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden">
+                <img
+                  src="https://i.postimg.cc/cJGbtHG1/Navy-Geometric-Business-Webinar-Instagram-Post-8.png"
+                  alt="ChatFin Enterprise Dashboard"
+                  className="w-full h-[300px] object-cover"
+                />
               </div>
             </div>
 
