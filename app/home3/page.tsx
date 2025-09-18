@@ -89,7 +89,6 @@ export default function Home3() {
                         The future of financial management is here. Experience AI-driven insights,
                         automated workflows, and intelligent decision-making.
                     </p>
-                    </p>
 
                     {/* Interactive CTAs */}
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -130,10 +129,10 @@ export default function Home3() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Product Showcase */}
-            <section className="py-20 relative bg-gray-50 dark:bg-gray-800">
+            < section className="py-20 relative bg-gray-50 dark:bg-gray-800" >
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -182,10 +181,10 @@ export default function Home3() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Individuals Section */}
-            <section className="py-20 bg-white dark:bg-gray-900">
+            < section className="py-20 bg-white dark:bg-gray-900" >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         {/* Content Left */}
@@ -253,10 +252,10 @@ export default function Home3() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Enterprises Section */}
-            <section className="py-20 bg-gray-50 dark:bg-gray-800">
+            < section className="py-20 bg-gray-50 dark:bg-gray-800" >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         {/* Demo Left */}
@@ -324,10 +323,10 @@ export default function Home3() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Feature Cosmos */}
-            <section className="py-20 relative overflow-hidden">
+            < section className="py-20 relative overflow-hidden" >
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent"></div>
 
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -414,10 +413,10 @@ export default function Home3() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Dual Path Section */}
-            <section className="py-20 relative">
+            < section className="py-20 relative" >
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -517,10 +516,10 @@ export default function Home3() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Final CTA */}
-            <section className="py-20 relative overflow-hidden">
+            < section className="py-20 relative overflow-hidden" >
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-transparent to-blue-500/10"></div>
                 <div className="absolute top-0 left-1/2 w-96 h-96 bg-green-500/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
 
@@ -563,10 +562,10 @@ export default function Home3() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Minimal Footer */}
-            <footer className="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+            < footer className="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800" >
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="flex items-center mb-4 md:mb-0">
@@ -583,7 +582,7 @@ export default function Home3() {
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer >
 
             <style jsx>{`
         @keyframes float {
@@ -608,6 +607,6 @@ export default function Home3() {
           animation: fade-in 0.8s ease-out forwards;
         }
       `}</style>
-        </div>
+        </div >
     )
 }
