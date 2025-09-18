@@ -327,7 +327,6 @@ export default function Home3() {
                     </div>
                 </div>
             </section >
-            {/* Minimal Footer */}
             < footer className="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800" >
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     <div className="flex flex-col md:flex-row justify-between items-center">
