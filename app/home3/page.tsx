@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play, Star, Sparkles, Zap, Shield, Globe, TrendingUp, Clock, CheckCircle, Bot, BarChart3, PieChart, CreditCard, FileText, Users, Target, Calendar, Smartphone, Database, Workflow, Layers, Activity, ArrowUpRight, Building2, User, ChevronDown, Infinity, DollarSign, Eye, Award, Lock } from "lucide-react"
+import { ArrowRight, Play, Star, Sparkles, Zap, Shield, Globe, TrendingUp, Clock, CheckCircle, Bot, BarChart3, PieChart, CreditCard, FileText, Users, Target, Calendar, Smartphone, Database, Workflow, Layers, Activity, ArrowUpRight, Building2, User, ChevronDown, Infinity, DollarSign, Eye, Award, Lock, Rocket } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useRouter } from "next/navigation"
 
@@ -57,44 +57,45 @@ export default function Home3() {
             </header>
 
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900">
                 {/* Animated Background */}
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-black to-blue-900/20"></div>
-                    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
-                    <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-green-50 dark:from-green-900/20 dark:via-gray-900 dark:to-green-900/20"></div>
+                    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-100/30 dark:bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
+                    <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-200/20 dark:bg-green-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
                 </div>
 
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     {/* Badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 mb-8 backdrop-blur-sm">
-                        <Sparkles className="w-4 h-4 text-green-400 animate-pulse" />
-                        <span className="text-sm font-semibold text-green-300">AI-Powered Financial Intelligence</span>
-                        <Sparkles className="w-4 h-4 text-blue-400 animate-pulse" />
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 mb-8 backdrop-blur-sm">
+                        <Sparkles className="w-4 h-4 text-[#135142] dark:text-green-400 animate-pulse" />
+                        <span className="text-sm font-semibold text-[#135142] dark:text-green-400">AI-Powered Financial Intelligence</span>
+                        <Sparkles className="w-4 h-4 text-[#135142] dark:text-green-400 animate-pulse" />
                     </div>
 
                     {/* Main Heading */}
                     <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-                        <span className="bg-gradient-to-r from-white via-green-200 to-blue-200 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-gray-900 via-[#135142] to-gray-900 dark:from-white dark:via-green-200 dark:to-white bg-clip-text text-transparent">
                             Money
                         </span>
                         <br />
-                        <span className="bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-[#135142] to-[#10b875] bg-clip-text text-transparent">
                             Simplified
                         </span>
                     </h1>
 
                     {/* Subheading */}
-                    <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
                         The future of financial management is here. Experience AI-driven insights,
                         automated workflows, and intelligent decision-making.
+                    </p>
                     </p>
 
                     {/* Interactive CTAs */}
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
                         <Button
                             onClick={handleGetStarted}
-                            className="group bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-105"
+                            className="group bg-gradient-to-r from-[#135142] to-[#10b875] hover:from-[#0d3b30] hover:to-[#0e9963] text-white px-8 py-4 rounded-2xl text-lg font-semibold shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-105"
                         >
                             <Zap className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                             Launch Experience
@@ -104,7 +105,7 @@ export default function Home3() {
                         <Button
                             onClick={handleBookDemo}
                             variant="outline"
-                            className="group border-2 border-gray-600 text-gray-300 hover:border-white hover:text-white px-8 py-4 rounded-2xl text-lg font-semibold bg-transparent backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
+                            className="group border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-[#135142] dark:hover:border-green-400 hover:text-[#135142] dark:hover:text-green-400 px-8 py-4 rounded-2xl text-lg font-semibold bg-white dark:bg-gray-900 backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
                         >
                             <Play className="w-5 h-5 mr-2 group-hover:animate-pulse" />
                             Watch Demo
@@ -114,33 +115,33 @@ export default function Home3() {
                     {/* Stats Row */}
                     <div className="flex justify-center items-center gap-8 text-center">
                         <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                            <span className="text-sm text-gray-400">500K+ Users</span>
+                            <div className="w-2 h-2 bg-[#135142] dark:bg-green-400 rounded-full animate-pulse"></div>
+                            <span className="text-sm text-gray-600 dark:text-gray-400">500K+ Users</span>
                         </div>
-                        <div className="w-1 h-4 bg-gray-600"></div>
+                        <div className="w-1 h-4 bg-gray-300 dark:bg-gray-600"></div>
                         <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                            <span className="text-sm text-gray-400">99.9% Uptime</span>
+                            <div className="w-2 h-2 bg-[#10b875] dark:bg-green-400 rounded-full animate-pulse"></div>
+                            <span className="text-sm text-gray-600 dark:text-gray-400">99.9% Uptime</span>
                         </div>
-                        <div className="w-1 h-4 bg-gray-600"></div>
+                        <div className="w-1 h-4 bg-gray-300 dark:bg-gray-600"></div>
                         <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-                            <span className="text-sm text-gray-400">AI-First</span>
+                            <div className="w-2 h-2 bg-[#135142] dark:bg-green-400 rounded-full animate-pulse"></div>
+                            <span className="text-sm text-gray-600 dark:text-gray-400">AI-First</span>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Product Showcase */}
-            <section className="py-20 relative">
+            <section className="py-20 relative bg-gray-50 dark:bg-gray-800">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                            <span className="bg-gradient-to-r from-[#135142] to-[#10b875] bg-clip-text text-transparent">
                                 Experience the Future
                             </span>
                         </h2>
-                        <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                             A glimpse into next-generation financial management
                         </p>
                     </div>
@@ -172,9 +173,155 @@ export default function Home3() {
                             </div>
                         </div>
 
-                        {/* Floating Elements */}
-                        <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl opacity-20 blur-xl animate-float"></div>
-                        <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl opacity-20 blur-xl animate-float-delay"></div>
+                        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden">
+                            <img
+                                src="https://i.postimg.cc/cJGbtHG1/Navy-Geometric-Business-Webinar-Instagram-Post-8.png"
+                                alt="ChatFin Future Dashboard"
+                                className="w-full h-[400px] object-cover"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Individuals Section */}
+            <section className="py-20 bg-white dark:bg-gray-900">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        {/* Content Left */}
+                        <div className="space-y-8">
+                            <div className="space-y-4">
+                                <div className="inline-block">
+                                    <span className="text-sm font-semibold text-[#135142] dark:text-green-400 tracking-wider uppercase bg-green-50 dark:bg-green-900/20 px-4 py-2 rounded-full border border-green-200 dark:border-green-800 flex items-center gap-2 w-fit">
+                                        <Users className="w-4 h-4" />
+                                        For Individuals
+                                    </span>
+                                </div>
+                                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
+                                    Future{" "}
+                                    <span className="bg-gradient-to-r from-[#135142] to-[#10b875] bg-clip-text text-transparent">
+                                        Personal Finance
+                                    </span>
+                                </h2>
+                                <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Experience next-generation personal finance with AI that anticipates your needs and simplifies every transaction.
+                                </p>
+                            </div>
+
+                            <div className="space-y-6">
+                                <div className="flex items-start gap-4">
+                                    <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <Sparkles className="w-5 h-5 text-[#135142] dark:text-green-400" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Predictive Intelligence</h3>
+                                        <p className="text-gray-600 dark:text-gray-300">AI that learns your patterns and predicts financial needs before they arise.</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4">
+                                    <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <Zap className="w-5 h-5 text-[#135142] dark:text-green-400" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Instant Optimization</h3>
+                                        <p className="text-gray-600 dark:text-gray-300">Real-time financial optimization with quantum-speed processing and insights.</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4">
+                                    <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <Rocket className="w-5 h-5 text-[#135142] dark:text-green-400" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Future-Ready Features</h3>
+                                        <p className="text-gray-600 dark:text-gray-300">Advanced capabilities that evolve with tomorrow's financial landscape.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Demo Right */}
+                        <div className="relative">
+                            <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden">
+                                <img
+                                    src="https://i.postimg.cc/cJGbtHG1/Navy-Geometric-Business-Webinar-Instagram-Post-8.png"
+                                    alt="ChatFin Personal Finance Future"
+                                    className="w-full h-[300px] object-cover"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Enterprises Section */}
+            <section className="py-20 bg-gray-50 dark:bg-gray-800">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        {/* Demo Left */}
+                        <div className="relative">
+                            <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden">
+                                <img
+                                    src="https://i.postimg.cc/cJGbtHG1/Navy-Geometric-Business-Webinar-Instagram-Post-8.png"
+                                    alt="ChatFin Enterprise Future"
+                                    className="w-full h-[300px] object-cover"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Content Right */}
+                        <div className="space-y-8">
+                            <div className="space-y-4">
+                                <div className="inline-block">
+                                    <span className="text-sm font-semibold text-[#135142] dark:text-green-400 tracking-wider uppercase bg-green-50 dark:bg-green-900/20 px-4 py-2 rounded-full border border-green-200 dark:border-green-800 flex items-center gap-2 w-fit">
+                                        <Building2 className="w-4 h-4" />
+                                        For Enterprises
+                                    </span>
+                                </div>
+                                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
+                                    Revolutionary{" "}
+                                    <span className="bg-gradient-to-r from-[#135142] to-[#10b875] bg-clip-text text-transparent">
+                                        Enterprise Platform
+                                    </span>
+                                </h2>
+                                <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Transform your organization with quantum-ready financial technology and intelligent automation.
+                                </p>
+                            </div>
+
+                            <div className="space-y-6">
+                                <div className="flex items-start gap-4">
+                                    <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <Infinity className="w-5 h-5 text-[#135142] dark:text-green-400" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Quantum Processing</h3>
+                                        <p className="text-gray-600 dark:text-gray-300">Process infinite data streams with quantum-scale computational power.</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4">
+                                    <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <Globe className="w-5 h-5 text-[#135142] dark:text-green-400" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Universal Integration</h3>
+                                        <p className="text-gray-600 dark:text-gray-300">Seamlessly connect with any system, anywhere in the digital universe.</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4">
+                                    <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <Shield className="w-5 h-5 text-[#135142] dark:text-green-400" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Fortress Security</h3>
+                                        <p className="text-gray-600 dark:text-gray-300">Military-grade protection with self-healing security architecture.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -419,7 +566,7 @@ export default function Home3() {
             </section>
 
             {/* Minimal Footer */}
-            <footer className="border-t border-gray-800 bg-black">
+            <footer className="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="flex items-center mb-4 md:mb-0">
