@@ -38,6 +38,9 @@ export default function Home() {
               <a href="/home3" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
                 Home3
               </a>
+              <a href="/coming-soon" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
+                Soon
+              </a>
             </nav>
 
             {/* Theme Toggle */}

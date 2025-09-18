@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Demo - ChatFin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            color: #111827;
+            min-height: 100vh;
+        }
+
+        /* Dark mode styles */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #111827;
+                color: white;
+            }
+        }
+
+        /* Logo section */
+        .top-logo {
+            text-align: center;
+            padding: 2rem 0 1rem 0;
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, #135142, #10b875);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .logo-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #135142;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .logo-text {
+                color: white;
+            }
+        }
+
+        /* Main Content */
+        .main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .main {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .main {
+                padding: 2rem 2rem;
+            }
+        }
+
+        .content-container {
+            max-width: 1536px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Left Column */
+        .badge {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .badge-content {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #135142;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            background-color: #f0fdf4;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid #dcfce7;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .badge-content {
+                color: #4ade80;
+                background-color: rgba(34, 197, 94, 0.2);
+                border-color: #166534;
+            }
+        }
+
+        .main-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        @media (min-width: 768px) {
+            .main-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .main-title {
+                color: white !important;
+            }
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: white;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .subtitle {
+                color: white;
+            }
+        }
+
+        .features-section {
+            margin-bottom: 2rem;
+        }
+
+        .features-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .features-title {
+                color: white;
+            }
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .check-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: #135142;
+            flex-shrink: 0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .check-icon {
+                color: #4ade80;
+            }
+        }
+
+        .feature-text {
+            color: white;
+            font-weight: 500;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .feature-text {
+                color: white;
+            }
+        }
+
+        /* Demo Options */
+        .demo-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .demo-options {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .demo-card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .demo-card {
+                background-color: #1f2937;
+                border-color: #374151;
+            }
+        }
+
+        .demo-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .demo-icon-blue {
+            background-color: #dbeafe;
+        }
+
+        .demo-icon-green {
+            background-color: #dcfce7;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .demo-icon-blue {
+                background-color: rgba(59, 130, 246, 0.3);
+            }
+
+            .demo-icon-green {
+                background-color: rgba(34, 197, 94, 0.3);
+            }
+        }
+
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .icon-blue {
+            color: #2563eb;
+        }
+
+        .icon-green {
+            color: #135142;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .icon-blue {
+                color: #60a5fa;
+            }
+
+            .icon-green {
+                color: #4ade80;
+            }
+        }
+
+        .demo-card-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .demo-card-title {
+                color: white;
+            }
+        }
+
+        .demo-card-desc {
+            color: #4b5563;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .demo-card-desc {
+                color: #d1d5db;
+            }
+        }
+
+        /* Buttons */
+        .btn {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, #135142, #10b875);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(to right, #0d3b30, #0e9963);
+        }
+
+        .btn-outline {
+            border: 2px solid #d1d5db;
+            color: #374151;
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: #f9fafb;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .btn-outline {
+                border-color: #4b5563;
+                color: #d1d5db;
+            }
+
+            .btn-outline:hover {
+                background-color: #1f2937;
+            }
+        }
+
+        /* Form Styles */
+        .form-container {
+            background-color: white;
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            margin-left: 1rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .form-container {
+                background-color: #1f2937;
+                border-color: #374151;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .form-container {
+                margin-left: 0;
+            }
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .form-title {
+                color: white;
+            }
+        }
+
+        .form-subtitle {
+            color: #4b5563;
+            font-weight: 500;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .form-subtitle {
+                color: #d1d5db;
+            }
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.75rem;
+            margin-left: 0.25rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .form-label {
+                color: #f9fafb;
+            }
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.75rem;
+            background-color: white;
+            color: #111827;
+            font-size: 1rem;
+            transition: all 0.3s;
+            line-height: 1.5;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #135142;
+            border-color: transparent;
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            .form-input,
+            .form-select,
+            .form-textarea {
+                border-color: #4b5563;
+                background-color: #111827;
+                color: white;
+            }
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 6rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(to right, #135142, #10b875);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(to right, #0d3b30, #0e9963);
+            transform: scale(1.05);
+        }
+
+        .form-disclaimer {
+            font-size: 0.75rem;
+            color: #4b5563;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .form-disclaimer {
+                color: #9ca3af;
+            }
+        }
+
+        /* Calendly Section */
+        .calendly-section {
+            background-color: transparent;
+            padding: 4rem 0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .calendly-section {
+                background-color: transparent;
+            }
+        }
+
+        .calendly-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .calendly-container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .calendly-container {
+                padding: 0 2rem;
+            }
+        }
+
+        .calendly-header {
+            max-width: 1024px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+        }
+
+        .calendly-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .calendly-title {
+                color: #ffffff !important;
+            }
+        }
+
+        .calendly-subtitle {
+            font-size: 1.25rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .calendly-subtitle {
+                color: white;
+            }
+        }
+
+        .calendly-widget-container {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
+        .calendly-widget-wrapper {
+            background-color: transparent;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .calendly-widget-wrapper {
+                background-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main Content -->
+    <main class="main">
+        <div class="content-container">
+            <div class="grid">
+                <div>
+                    <div class="badge">
+                        <span class="badge-content">
+                            Enterprise Demo
+                        </span>
+                    </div>
+
+                    <h1 class="main-title">
+                        See ChatFin in action
+                    </h1>
+
+                    <p class="subtitle">
+                        Schedule a personalized demo with our team and discover how ChatFin can transform your finance
+                        operations.
+                    </p>
+
+                    <!-- What you'll learn -->
+                    <div class="features-section">
+                        <h3 class="features-title">What you'll see in the demo:</h3>
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="feature-text">AI-powered financial document processing</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="feature-text">Automated reconciliation workflows</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="feature-text">Real-time analytics and reporting</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="feature-text">Integration with your existing systems</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="feature-text">Custom enterprise features and pricing</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Demo Options -->
+                    <div class="demo-options">
+                        <div class="demo-card">
+                            <div class="demo-icon demo-icon-blue">
+                                <svg class="icon icon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="demo-card-title">Quick Schedule</h3>
+                            <p class="demo-card-desc">
+                                Choose a time that works for you using our calendar
+                            </p>
+                            <button onclick="openCalendly()" class="btn btn-primary">
+                                Schedule with Calendly
+                            </button>
+                        </div>
+
+                        <div class="demo-card">
+                            <div class="demo-icon demo-icon-green">
+                                <svg class="icon icon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="demo-card-title">Contact Form</h3>
+                            <p class="demo-card-desc">
+                                Fill out the form below and we'll reach out within 24 hours
+                            </p>
+                            <button onclick="scrollToForm()" class="btn btn-outline">
+                                Fill Contact Form
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Form -->
+                <div id="demo-form" class="form-container">
+                    <div class="form-header">
+                        <h2 class="form-title">Book your demo</h2>
+                        <p class="form-subtitle">Fill out the form and we'll be in touch within 24 hours</p>
+                    </div>
+
+                    <form class="form" onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">
+                                    First Name
+                                </label>
+                                <input type="text" id="firstName" class="form-input" placeholder="John" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">
+                                    Last Name
+                                </label>
+                                <input type="text" id="lastName" class="form-input" placeholder="Doe" required />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Work Email
+                            </label>
+                            <input type="email" id="email" class="form-input" placeholder="john@company.com" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company" class="form-label">
+                                Company
+                            </label>
+                            <input type="text" id="company" class="form-input" placeholder="Acme Corp" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="teamSize" class="form-label">
+                                Team Size
+                            </label>
+                            <select id="teamSize" class="form-select">
+                                <option value="">Select team size</option>
+                                <option value="1-10">1-10 people</option>
+                                <option value="11-50">11-50 people</option>
+                                <option value="51-200">51-200 people</option>
+                                <option value="200+">200+ people</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">
+                                Tell us about your needs (optional)
+                            </label>
+                            <textarea id="message" class="form-textarea"
+                                placeholder="What specific finance challenges are you looking to solve?"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            Book Demo Call
+                        </button>
+
+                        <p class="form-disclaimer">
+                            By submitting this form, you agree to our privacy policy and terms of service.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Calendly Embed Section -->
+    <section class="calendly-section">
+        <div class="calendly-container">
+            <div class="calendly-header">
+                <h2 class="calendly-title">
+                    Or Schedule Directly
+                </h2>
+                <p class="calendly-subtitle">
+                    Choose a time that works best for you using our calendar
+                </p>
+            </div>
+
+            <div class="calendly-widget-container">
+                <div class="calendly-widget-wrapper">
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget"
+                        data-url="https://calendly.com/chatfin/chatfin-finance-ai-expert?hide_event_type_details=1&hide_gdpr_banner=1"
+                        style="min-width:320px;height:700px;"></div>
+                    <!-- Calendly inline widget end -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script>
+        function openCalendly() {
+            window.open('https://calendly.com/chatfin/chatfin-finance-ai-expert', '_blank', 'width=800,height=600');
+        }
+
+        function scrollToForm() {
+            document.getElementById('demo-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
+                teamSize: document.getElementById('teamSize').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toISOString()
+            };
+
+            // Here you would typically send the data to your backend
+            console.log('Form Data:', formData);
+
+            // Show success message
+            alert('Thank you! We will be in touch within 24 hours.');
+
+            // Reset form
+            event.target.reset();
+        }
+    </script>
+</body>
+
+</html>

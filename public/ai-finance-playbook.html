@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI for Finance Playbook - ChatFin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            color: #111827;
+            min-height: 100vh;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #111827;
+                color: white;
+            }
+        }
+
+        .main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .main {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .main {
+                padding: 2rem 2rem;
+            }
+        }
+
+        .content-container {
+            max-width: 1536px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        .header-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .badge-content {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #135142;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            background-color: #f0fdf4;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid #dcfce7;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .badge-content {
+                color: #4ade80;
+                background-color: rgba(34, 197, 94, 0.2);
+                border-color: #166534;
+            }
+        }
+
+        .main-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        @media (min-width: 768px) {
+            .main-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .main-title {
+                color: white !important;
+            }
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: white;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .subtitle {
+                color: white;
+            }
+        }
+
+        /* View Options */
+        .view-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 640px) {
+            .view-options {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .view-card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .view-card {
+                background-color: #1f2937;
+                border-color: #374151;
+            }
+        }
+
+        .view-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+        }
+
+        .view-icon-blue {
+            background-color: #dbeafe;
+        }
+
+        .view-icon-green {
+            background-color: #dcfce7;
+        }
+
+        .view-icon-purple {
+            background-color: #ede9fe;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .view-icon-blue {
+                background-color: rgba(59, 130, 246, 0.3);
+            }
+
+            .view-icon-green {
+                background-color: rgba(34, 197, 94, 0.3);
+            }
+
+            .view-icon-purple {
+                background-color: rgba(147, 51, 234, 0.3);
+            }
+        }
+
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .icon-blue {
+            color: #2563eb;
+        }
+
+        .icon-green {
+            color: #135142;
+        }
+
+        .icon-purple {
+            color: #7c3aed;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .icon-blue {
+                color: #60a5fa;
+            }
+
+            .icon-green {
+                color: #4ade80;
+            }
+
+            .icon-purple {
+                color: #a78bfa;
+            }
+        }
+
+        .view-card-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .view-card-title {
+                color: white;
+            }
+        }
+
+        .view-card-desc {
+            color: #4b5563;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .view-card-desc {
+                color: #d1d5db;
+            }
+        }
+
+        /* Buttons */
+        .btn {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, #135142, #10b875);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(to right, #0d3b30, #0e9963);
+        }
+
+        .btn-outline {
+            border: 2px solid #d1d5db;
+            color: #374151;
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: #f9fafb;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .btn-outline {
+                border-color: #4b5563;
+                color: #d1d5db;
+            }
+
+            .btn-outline:hover {
+                background-color: #1f2937;
+            }
+        }
+
+        /* PDF Viewer Section */
+        .pdf-viewer-section {
+            background-color: transparent;
+            padding: 2rem 0;
+        }
+
+        .pdf-viewer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .pdf-viewer-container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .pdf-viewer-container {
+                padding: 0 2rem;
+            }
+        }
+
+        .pdf-embed-wrapper {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .pdf-embed-wrapper {
+                background-color: #1f2937;
+                border: 1px solid #374151;
+            }
+        }
+
+        .pdf-embed {
+            width: 100%;
+            height: 800px;
+            border: none;
+            border-radius: 0.5rem;
+        }
+
+        /* Download Section */
+        .download-section {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .download-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .download-title {
+                color: white;
+            }
+        }
+
+        .download-subtitle {
+            font-size: 1rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .download-subtitle {
+                color: white;
+            }
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(to right, #135142, #10b875);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(to right, #0d3b30, #0e9963);
+            transform: translateY(-2px);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main Content -->
+    <main class="main">
+        <div class="content-container">
+            <!-- Header Section -->
+            <div class="header-section">
+                <div class="badge">
+                    <span class="badge-content">
+                        Free Resource
+                    </span>
+                </div>
+
+                <h1 class="main-title">
+                    AI for Finance Playbook
+                </h1>
+
+                <p class="subtitle">
+                    Get actionable AI insights and implementation strategies to transform your finance operations.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- PDF Viewer Section -->
+    <section id="pdf-viewer-section" class="pdf-viewer-section">
+        <div class="pdf-viewer-container">
+            <div class="pdf-embed-wrapper">
+                <iframe src="https://chatfin.ai/wp-content/uploads/2025/09/AI_CFO_Playbook-1.pdf" width="100%"
+                    height="600px" style="border:none;">
+                </iframe>
+            </div>
+
+            <div class="download-section">
+                <h3 class="download-title">Want to keep this playbook handy?</h3>
+                <p class="download-subtitle">Download your copy and reference it anytime during your AI implementation
+                    journey</p>
+                <a href="#" onclick="downloadPDF()" class="download-btn">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                        </path>
+                    </svg>
+                    Download Full Playbook
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // PDF URL for download
+        const PDF_URL = 'https://chatfin.ai/wp-content/uploads/2025/09/AI_CFO_Playbook-1.pdf';
+
+        function downloadPDF() {
+            // Create a temporary link element and trigger download
+            const link = document.createElement('a');
+            link.href = PDF_URL;
+            link.download = 'AI-for-Finance-Playbook-ChatFin.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+
+</html>
