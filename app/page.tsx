@@ -13,11 +13,11 @@ export default function Home() {
   }
 
   const handleBookDemo = () => {
-    router.push('/book-demo')
+    router.push('/book-demo/home1')
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 font-poppins">
+    <div className="min-h-screen bg-white dark:bg-gray-900 font-['Poppins',sans-serif]">
       {/* Navigation */}
       <header className="relative z-50 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 sticky top-0">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,30 +30,13 @@ export default function Home() {
             {/* Navigation Links */}
             <nav className="hidden md:flex items-center space-x-8">
               <a href="/" className="text-[#135142] dark:text-white hover:text-[#10b875] transition-colors text-sm font-medium border-b-2 border-[#135142] dark:border-white pb-1 relative group">
-                Home
+                Home1
               </a>
               <a href="/home2" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
                 Home2
               </a>
               <a href="/home3" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
                 Home3
-              </a>
-              <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group flex items-center">
-                Products
-                <span className="ml-1">▾</span>
-              </a>
-              <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
-                Solutions
-              </a>
-              <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group flex items-center">
-                Partners
-                <span className="ml-1">▾</span>
-              </a>
-              <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
-                Pricing
-              </a>
-              <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
-                Blog
               </a>
             </nav>
 
@@ -215,20 +198,12 @@ export default function Home() {
 
             {/* Demo Right */}
             <div className="relative">
-              <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 border border-gray-200 dark:border-gray-700 shadow-2xl">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="ml-4 text-sm text-gray-500 dark:text-gray-400 font-mono">Personal Dashboard</span>
-                </div>
-                <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden">
-                  <img
-                    src="https://i.postimg.cc/cJGbtHG1/Navy-Geometric-Business-Webinar-Instagram-Post-8.png"
-                    alt="ChatFin Personal Dashboard"
-                    className="w-full h-[300px] object-cover"
-                  />
-                </div>
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden">
+                <img
+                  src="https://i.postimg.cc/cJGbtHG1/Navy-Geometric-Business-Webinar-Instagram-Post-8.png"
+                  alt="ChatFin Personal Dashboard"
+                  className="w-full h-[300px] object-cover"
+                />
               </div>
             </div>
           </div>
