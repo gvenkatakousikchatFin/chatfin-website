@@ -15,7 +15,7 @@ export default function Dashboard() {
                 <div className="max-w-full mx-auto">
                     <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden shadow-lg">
                         <img
-                            src="https://i.postimg.cc/cJGbtHG1/Navy-Geometric-Business-Webinar-Instagram-Post-8.png"
+                            src="/dashboard.png"
                             alt="ChatFin Dashboard"
                             className="w-full h-auto object-cover"
                         />

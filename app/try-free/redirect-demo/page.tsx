@@ -26,8 +26,14 @@ export default function TryFreeRedirectDemo() {
     }, [router])
 
     const handleBookDemo = () => {
-        // Redirect to chatfin.ai/talk-to-us
-        window.location.href = 'https://chatfin.ai/talk-to-us'
+        // Store user info and redirect to enterprise demo
+        localStorage.setItem('demoFormData', JSON.stringify({
+            name: userInfo.name,
+            email: userInfo.email,
+            company: userInfo.company,
+            message: 'Customer without ERP system - interested in ChatFin setup guidance'
+        }))
+        router.push('/book-demo/schedule')
     }
 
     const handleBackHome = () => {
@@ -42,13 +48,16 @@ export default function TryFreeRedirectDemo() {
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900 font-['Poppins',sans-serif]">
             {/* Navigation */}
-            <header className="relative z-50 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+            <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
-                        {/* Logo */}
-                        <div className="flex items-center">
-                            <h1 className="text-2xl font-bold text-[#135142] dark:text-white">ChatFin</h1>
-                        </div>
+                        {/* Back to Home */}
+                        <button
+                            onClick={() => router.push('/')}
+                            className="text-[#135142] dark:text-green-400 hover:underline text-lg font-semibold flex items-center gap-2"
+                        >
+                            ← Back to Home
+                        </button>
 
                         {/* Theme Toggle */}
                         <div className="flex items-center gap-4">
@@ -58,22 +67,14 @@ export default function TryFreeRedirectDemo() {
                 </div>
             </header>
 
-            {/* Back to Home Link */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-                <button
-                    onClick={() => router.push('/')}
-                    className="text-[#135142] dark:text-green-400 hover:underline text-sm flex items-center gap-1"
-                >
-                    ← Back to home
-                </button>
-            </div>
+
 
             {/* Main Content */}
-            <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">
                 <div className="max-w-lg mx-auto text-center">
                     {/* Info Icon */}
-                    <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-100 dark:bg-blue-900/30 rounded-full mb-8">
-                        <Info className="w-12 h-12 text-blue-600 dark:text-blue-400" />
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full mb-8">
+                        <Info className="w-12 h-12 text-[#135142] dark:text-green-400" />
                     </div>
 
                     {/* Message */}
@@ -117,8 +118,8 @@ export default function TryFreeRedirectDemo() {
                         </p>
                     </div>
 
-                    {/* CTA Buttons */}
-                    <div className="space-y-4">
+                    {/* CTA Button */}
+                    <div>
                         <Button
                             onClick={handleBookDemo}
                             className="w-full bg-gradient-to-r from-[#135142] to-[#10b875] hover:from-[#0d3b30] hover:to-[#0e9963] text-white py-4 rounded-xl text-lg font-semibold flex items-center justify-center gap-2"
@@ -128,13 +129,7 @@ export default function TryFreeRedirectDemo() {
                             <ArrowRight className="w-5 h-5" />
                         </Button>
 
-                        <Button
-                            onClick={handleBackHome}
-                            variant="outline"
-                            className="w-full py-4 rounded-xl text-lg font-semibold border-2"
-                        >
-                            Back to Home
-                        </Button>
+
                     </div>
 
                     <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">

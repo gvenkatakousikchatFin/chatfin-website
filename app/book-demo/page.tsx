@@ -76,13 +76,16 @@ export default function BookDemo() {
     return (
         <div className="min-h-screen bg-white dark:bg-gray-900 font-['Poppins',sans-serif]">
             {/* Navigation */}
-            <header className="relative z-50 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+            <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
-                        {/* Logo */}
-                        <div className="flex items-center cursor-pointer" onClick={handleBack}>
-                            <h1 className="text-2xl font-bold text-[#135142] dark:text-white">ChatFin</h1>
-                        </div>
+                        {/* Back to Home */}
+                        <button
+                            onClick={() => router.push('/')}
+                            className="text-[#135142] dark:text-green-400 hover:underline text-lg font-semibold flex items-center gap-2"
+                        >
+                            ← Back to Home
+                        </button>
 
                         {/* Theme Toggle */}
                         <div className="flex items-center gap-4">
@@ -92,18 +95,10 @@ export default function BookDemo() {
                 </div>
             </header>
 
-            {/* Back to Home Link */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-                <button
-                    onClick={() => router.push('/')}
-                    className="text-[#135142] dark:text-green-400 hover:underline text-sm flex items-center gap-1"
-                >
-                    ← Back to home
-                </button>
-            </div>
+
 
             {/* Main Content */}
-            <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">
                 <div className="max-w-lg mx-auto">
                     {/* Header */}
                     <div className="text-center mb-12">
