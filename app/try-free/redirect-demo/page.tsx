@@ -35,7 +35,6 @@ export default function TryFreeRedirectDemo() {
         }))
         router.push('/book-demo/schedule')
     }
-
     const handleBackHome = () => {
         // Clear localStorage and go home
         localStorage.removeItem('userEmail')
