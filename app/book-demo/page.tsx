@@ -96,7 +96,7 @@ export default function BookDemo() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-6">
                 <button
                     onClick={() => router.push('/')}
-                    className="text-blue-600 dark:text-blue-400 hover:underline text-sm flex items-center gap-1"
+                    className="text-[#135142] dark:text-green-400 hover:underline text-sm flex items-center gap-1"
                 >
                     ← Back to home
                 </button>
@@ -107,8 +107,8 @@ export default function BookDemo() {
                 <div className="max-w-lg mx-auto">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full mb-6">
-                            <Calendar className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                        <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full mb-6">
+                            <Calendar className="w-8 h-8 text-[#135142] dark:text-green-400" />
                         </div>
                         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
                             Book a Demo
@@ -125,39 +125,39 @@ export default function BookDemo() {
                     <div className="space-y-6">
                         {/* Name */}
                         <div className="relative">
-                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
                             <Input
                                 type="text"
                                 placeholder="Your full name *"
                                 value={formData.name}
                                 onChange={(e) => handleInputChange('name', e.target.value)}
-                                className="pl-10 py-4 text-lg border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 dark:focus:border-blue-400"
+                                className="pl-10 py-4 text-lg border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-[#135142] dark:focus:border-green-400"
                             />
                         </div>
 
                         {/* Company */}
                         <div className="relative">
-                            <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                            <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
                             <Input
                                 type="text"
                                 placeholder="Company name *"
                                 value={formData.company}
                                 onChange={(e) => handleInputChange('company', e.target.value)}
-                                className="pl-10 py-4 text-lg border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 dark:focus:border-blue-400"
+                                className="pl-10 py-4 text-lg border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-[#135142] dark:focus:border-green-400"
                             />
                         </div>
 
                         {/* Email */}
                         <div className="relative">
-                            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
                             <Input
                                 type="email"
                                 placeholder="Work email address *"
                                 value={formData.email}
                                 onChange={(e) => handleInputChange('email', e.target.value)}
-                                className={`pl-10 py-4 text-lg border-2 rounded-xl focus:border-blue-500 dark:focus:border-blue-400 ${emailError
-                                        ? 'border-red-500 dark:border-red-400'
-                                        : 'border-gray-200 dark:border-gray-600'
+                                className={`pl-10 py-4 text-lg border-2 rounded-xl focus:border-[#135142] dark:focus:border-green-400 ${emailError
+                                    ? 'border-red-500 dark:border-red-400'
+                                    : 'border-gray-200 dark:border-gray-600'
                                     }`}
                             />
                             {emailError && (
@@ -167,12 +167,12 @@ export default function BookDemo() {
 
                         {/* Message */}
                         <div className="relative">
-                            <MessageSquare className="absolute left-3 top-4 text-gray-400 w-5 h-5" />
+                            <MessageSquare className="absolute left-3 top-4 text-gray-400 w-5 h-5 z-10" />
                             <Textarea
                                 placeholder="Tell us about your current financial processes and what you'd like to see in the demo (optional)"
                                 value={formData.message}
                                 onChange={(e) => handleInputChange('message', e.target.value)}
-                                className="pl-10 pt-4 pb-4 text-lg border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-blue-500 dark:focus:border-blue-400 min-h-[120px] resize-none"
+                                className="pl-10 pt-4 pb-4 text-lg border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-[#135142] dark:focus:border-green-400 min-h-[120px] resize-none"
                             />
                         </div>
 
@@ -183,19 +183,19 @@ export default function BookDemo() {
                             </h3>
                             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
                                 <li className="flex items-start gap-2">
-                                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <div className="w-1.5 h-1.5 bg-[#135142] rounded-full mt-2 flex-shrink-0"></div>
                                     <span>Live walkthrough of ChatFin's AI finance features</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <div className="w-1.5 h-1.5 bg-[#135142] rounded-full mt-2 flex-shrink-0"></div>
                                     <span>Discussion of your specific use cases and requirements</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <div className="w-1.5 h-1.5 bg-[#135142] rounded-full mt-2 flex-shrink-0"></div>
                                     <span>Custom pricing and enterprise feature overview</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <div className="w-1.5 h-1.5 bg-[#135142] rounded-full mt-2 flex-shrink-0"></div>
                                     <span>Q&A session with our finance automation experts</span>
                                 </li>
                             </ul>
@@ -205,7 +205,7 @@ export default function BookDemo() {
                         <Button
                             onClick={handleSubmit}
                             disabled={!isFormValid}
-                            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 rounded-xl text-lg font-semibold flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full bg-gradient-to-r from-[#135142] to-[#10b875] hover:from-[#0d3b30] hover:to-[#0e9963] text-white py-4 rounded-xl text-lg font-semibold flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             Continue to Schedule
                             <ArrowRight className="w-5 h-5" />

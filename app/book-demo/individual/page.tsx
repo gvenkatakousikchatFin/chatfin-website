@@ -26,25 +26,6 @@ export default function IndividualDemo() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-
-        // Validate required fields
-        if (!formData.name.trim()) {
-            alert('Please enter your full name')
-            return
-        }
-
-        if (!formData.email.trim()) {
-            alert('Please enter your email address')
-            return
-        }
-
-        // Validate email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-        if (!emailRegex.test(formData.email)) {
-            alert('Please enter a valid email address')
-            return
-        }
-
         // Store form data and redirect to schedule page
         localStorage.setItem('demoFormData', JSON.stringify({
             name: formData.name,
@@ -53,8 +34,7 @@ export default function IndividualDemo() {
             company: 'Individual', // Set as individual since this is individual demo
             currentSituation: formData.currentSituation,
             goals: formData.goals,
-            timeSlot: formData.timeSlot,
-            demoType: 'individual'
+            timeSlot: formData.timeSlot
         }))
         router.push('/book-demo/schedule')
     }
@@ -99,7 +79,7 @@ export default function IndividualDemo() {
                                 </div>
                                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
                                     See how ChatFin can{" "}
-                                    <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+                                    <span className="bg-gradient-to-r from-[#135142] to-[#10b875] bg-clip-text text-transparent">
                                         transform your finances
                                     </span>
                                 </h1>
@@ -168,7 +148,7 @@ export default function IndividualDemo() {
                             </div>
 
                             {/* Social Proof */}
-                            <div className="p-6 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl border border-green-200 dark:border-green-800">
+                            <div className="p-6 bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl border border-green-200 dark:border-green-800">
                                 <div className="flex items-center gap-2 mb-3">
                                     <div className="flex">
                                         {[...Array(5)].map((_, i) => (

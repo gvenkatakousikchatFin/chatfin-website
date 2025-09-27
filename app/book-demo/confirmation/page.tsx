@@ -123,8 +123,8 @@ Company: ${formData.company}`
                         <div className="space-y-4">
                             {/* Date & Time */}
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
-                                    <Calendar className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                                <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
+                                    <Calendar className="w-6 h-6 text-[#135142] dark:text-green-400" />
                                 </div>
                                 <div>
                                     <p className="font-medium text-gray-900 dark:text-white">
@@ -154,26 +154,26 @@ Company: ${formData.company}`
                     </div>
 
                     {/* What's Next */}
-                    <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-6 mb-8 text-left">
-                        <h3 className="font-semibold text-blue-900 dark:text-blue-400 mb-4 flex items-center gap-2">
+                    <div className="bg-green-50 dark:bg-green-900/20 rounded-2xl p-6 mb-8 text-left">
+                        <h3 className="font-semibold text-[#135142] dark:text-green-400 mb-4 flex items-center gap-2">
                             <Clock className="w-5 h-5" />
                             What Happens Next?
                         </h3>
-                        <ul className="space-y-3 text-blue-800 dark:text-blue-300">
+                        <ul className="space-y-3 text-[#135142] dark:text-green-300">
                             <li className="flex items-start gap-3">
-                                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <div className="w-2 h-2 bg-[#135142] rounded-full mt-2 flex-shrink-0"></div>
                                 <span>You'll receive a calendar invite at <strong>{formData.email}</strong> within the next few minutes</span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <div className="w-2 h-2 bg-[#135142] rounded-full mt-2 flex-shrink-0"></div>
                                 <span>A ChatFin expert will join the meeting to give you a personalized demo</span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <div className="w-2 h-2 bg-[#135142] rounded-full mt-2 flex-shrink-0"></div>
                                 <span>We'll discuss your specific needs and show relevant features</span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <div className="w-2 h-2 bg-[#135142] rounded-full mt-2 flex-shrink-0"></div>
                                 <span>You'll receive follow-up materials and pricing information after the demo</span>
                             </li>
                         </ul>
@@ -202,7 +202,7 @@ Company: ${formData.company}`
 
                     {/* Contact Info */}
                     <div className="mt-8 text-sm text-gray-500 dark:text-gray-400">
-                        <p>Need to reschedule? Contact us at <a href="mailto:demos@chatfin.com" className="text-blue-600 dark:text-blue-400 hover:underline">demos@chatfin.com</a></p>
+                        <p>Need to reschedule? Contact us at <a href="mailto:demos@chatfin.com" className="text-[#135142] dark:text-green-400 hover:underline">demos@chatfin.com</a></p>
                     </div>
                 </div>
             </main>

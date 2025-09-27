@@ -33,56 +33,9 @@ export default function EnterpriseDemo() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-
-        // Validate required fields
-        if (!formData.firstName.trim()) {
-            alert('Please enter your first name')
-            return
-        }
-
-        if (!formData.lastName.trim()) {
-            alert('Please enter your last name')
-            return
-        }
-
-        if (!formData.email.trim()) {
-            alert('Please enter your business email')
-            return
-        }
-
-        // Validate work email (should not be from common personal email providers)
-        const personalEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com', 'icloud.com']
-        const emailDomain = formData.email.toLowerCase().split('@')[1]
-        if (personalEmailDomains.includes(emailDomain)) {
-            alert('Please use your business email address')
-            return
-        }
-
-        if (!formData.company.trim()) {
-            alert('Please enter your company name')
-            return
-        }
-
-        if (!formData.jobTitle.trim()) {
-            alert('Please enter your job title')
-            return
-        }
-
-        // Store form data and redirect to schedule page
-        localStorage.setItem('demoFormData', JSON.stringify({
-            name: `${formData.firstName} ${formData.lastName}`,
-            email: formData.email,
-            phone: formData.phone,
-            company: formData.company,
-            jobTitle: formData.jobTitle,
-            companySize: formData.companySize,
-            industry: formData.industry,
-            currentTools: formData.currentTools,
-            challenges: formData.challenges,
-            timeline: formData.timeline,
-            demoType: 'enterprise'
-        }))
-        router.push('/book-demo/schedule')
+        // Handle form submission here
+        console.log('Enterprise demo request submitted:', formData)
+        alert('Enterprise demo request submitted! Our sales team will contact you within 4 hours.')
     }
 
     return (
@@ -119,13 +72,13 @@ export default function EnterpriseDemo() {
                         <div className="lg:col-span-2 space-y-8">
                             {/* Header */}
                             <div className="space-y-4">
-                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
-                                    <Building2 className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                                    <span className="text-sm font-semibold text-blue-700 dark:text-blue-300">Enterprise Solutions Demo</span>
+                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 rounded-full">
+                                    <Building2 className="w-4 h-4 text-[#135142] dark:text-green-400" />
+                                    <span className="text-sm font-semibold text-[#135142] dark:text-green-300">Enterprise Solutions Demo</span>
                                 </div>
                                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
                                     Scale your finance operations with{" "}
-                                    <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                                    <span className="bg-gradient-to-r from-[#135142] to-[#10b875] bg-clip-text text-transparent">
                                         enterprise-grade ChatFin
                                     </span>
                                 </h1>
@@ -170,10 +123,10 @@ export default function EnterpriseDemo() {
                                             description: "Multi-currency support, international tax compliance, and global reporting"
                                         }
                                     ].map((feature, index) => (
-                                        <div key={index} className="p-4 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-xl border border-gray-200 dark:border-gray-700">
+                                        <div key={index} className="p-4 bg-gradient-to-br from-gray-50 to-green-50 dark:from-gray-800 dark:to-green-900/20 rounded-xl border border-gray-200 dark:border-gray-700">
                                             <div className="flex items-start gap-3">
-                                                <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <feature.icon className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                                                <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <feature.icon className="w-4 h-4 text-[#135142] dark:text-green-400" />
                                                 </div>
                                                 <div>
                                                     <h4 className="font-semibold text-gray-900 dark:text-white mb-1 text-sm">{feature.title}</h4>
@@ -195,8 +148,8 @@ export default function EnterpriseDemo() {
                                     <p className="text-gray-600 dark:text-gray-300 text-sm">Financial close processes</p>
                                 </div>
                                 <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
-                                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                        <BarChart3 className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                                    <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                        <BarChart3 className="w-6 h-6 text-[#135142] dark:text-green-400" />
                                     </div>
                                     <h4 className="font-bold text-gray-900 dark:text-white mb-2">60% Reduction</h4>
                                     <p className="text-gray-600 dark:text-gray-300 text-sm">In manual data entry</p>
@@ -211,9 +164,9 @@ export default function EnterpriseDemo() {
                             </div>
 
                             {/* Social Proof */}
-                            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
+                            <div className="bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl p-6 border border-green-200 dark:border-green-800">
                                 <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <div className="w-12 h-12 bg-[#135142] rounded-full flex items-center justify-center flex-shrink-0">
                                         <Award className="w-6 h-6 text-white" />
                                     </div>
                                     <div>

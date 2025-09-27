@@ -116,7 +116,7 @@ export default function BookDemoSchedule() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-6">
                 <button
                     onClick={() => router.push('/')}
-                    className="text-blue-600 dark:text-blue-400 hover:underline text-sm flex items-center gap-1"
+                    className="text-[#135142] dark:text-green-400 hover:underline text-sm flex items-center gap-1"
                 >
                     ← Back to home
                 </button>
@@ -127,8 +127,8 @@ export default function BookDemoSchedule() {
                 <div className="max-w-2xl mx-auto">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full mb-6">
-                            <Clock className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                        <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full mb-6">
+                            <Clock className="w-8 h-8 text-[#135142] dark:text-green-400" />
                         </div>
                         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
                             Choose Your Time
@@ -169,7 +169,7 @@ export default function BookDemoSchedule() {
                                     key={date.value}
                                     onClick={() => setSelectedDate(date.value)}
                                     className={`p-3 rounded-xl border-2 transition-all duration-200 text-sm font-medium ${selectedDate === date.value
-                                        ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300'
+                                        ? 'border-[#135142] bg-green-50 dark:bg-green-900/20 text-[#135142] dark:text-green-300'
                                         : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 text-gray-700 dark:text-gray-300'
                                         }`}
                                 >
@@ -193,7 +193,7 @@ export default function BookDemoSchedule() {
                                         onClick={() => slot.available && setSelectedTime(slot.time)}
                                         disabled={!slot.available}
                                         className={`p-3 rounded-xl border-2 transition-all duration-200 text-sm font-medium ${selectedTime === slot.time
-                                            ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300'
+                                            ? 'border-[#135142] bg-green-50 dark:bg-green-900/20 text-[#135142] dark:text-green-300'
                                             : slot.available
                                                 ? 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500 text-gray-700 dark:text-gray-300'
                                                 : 'border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-400 cursor-not-allowed'
@@ -237,7 +237,7 @@ export default function BookDemoSchedule() {
                         <Button
                             onClick={handleSubmit}
                             disabled={!isFormValid}
-                            className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 rounded-xl text-lg font-semibold flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="flex-1 bg-gradient-to-r from-[#135142] to-[#10b875] hover:from-[#0d3b30] hover:to-[#0e9963] text-white py-4 rounded-xl text-lg font-semibold flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             Book Demo
                             <ArrowRight className="w-5 h-5" />
