@@ -26,9 +26,37 @@ export default function IndividualDemo() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-        // Handle form submission here
-        console.log('Form submitted:', formData)
-        alert('Demo request submitted! We\'ll contact you within 24 hours.')
+
+        // Validate required fields
+        if (!formData.name.trim()) {
+            alert('Please enter your full name')
+            return
+        }
+
+        if (!formData.email.trim()) {
+            alert('Please enter your email address')
+            return
+        }
+
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailRegex.test(formData.email)) {
+            alert('Please enter a valid email address')
+            return
+        }
+
+        // Store form data and redirect to schedule page
+        localStorage.setItem('demoFormData', JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            company: 'Individual', // Set as individual since this is individual demo
+            currentSituation: formData.currentSituation,
+            goals: formData.goals,
+            timeSlot: formData.timeSlot,
+            demoType: 'individual'
+        }))
+        router.push('/book-demo/schedule')
     }
 
     return (

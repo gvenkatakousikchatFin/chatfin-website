@@ -9,11 +9,11 @@ export default function Home() {
   const router = useRouter()
 
   const handleGetStarted = () => {
-    router.push('/get-started')
+    router.push('/try-free')
   }
 
   const handleBookDemo = () => {
-    router.push('/book-demo/home1')
+    router.push('/book-demo')
   }
 
   return (

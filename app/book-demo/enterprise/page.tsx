@@ -33,9 +33,56 @@ export default function EnterpriseDemo() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-        // Handle form submission here
-        console.log('Enterprise demo request submitted:', formData)
-        alert('Enterprise demo request submitted! Our sales team will contact you within 4 hours.')
+
+        // Validate required fields
+        if (!formData.firstName.trim()) {
+            alert('Please enter your first name')
+            return
+        }
+
+        if (!formData.lastName.trim()) {
+            alert('Please enter your last name')
+            return
+        }
+
+        if (!formData.email.trim()) {
+            alert('Please enter your business email')
+            return
+        }
+
+        // Validate work email (should not be from common personal email providers)
+        const personalEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com', 'icloud.com']
+        const emailDomain = formData.email.toLowerCase().split('@')[1]
+        if (personalEmailDomains.includes(emailDomain)) {
+            alert('Please use your business email address')
+            return
+        }
+
+        if (!formData.company.trim()) {
+            alert('Please enter your company name')
+            return
+        }
+
+        if (!formData.jobTitle.trim()) {
+            alert('Please enter your job title')
+            return
+        }
+
+        // Store form data and redirect to schedule page
+        localStorage.setItem('demoFormData', JSON.stringify({
+            name: `${formData.firstName} ${formData.lastName}`,
+            email: formData.email,
+            phone: formData.phone,
+            company: formData.company,
+            jobTitle: formData.jobTitle,
+            companySize: formData.companySize,
+            industry: formData.industry,
+            currentTools: formData.currentTools,
+            challenges: formData.challenges,
+            timeline: formData.timeline,
+            demoType: 'enterprise'
+        }))
+        router.push('/book-demo/schedule')
     }
 
     return (

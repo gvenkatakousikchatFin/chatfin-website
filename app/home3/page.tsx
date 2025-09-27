@@ -326,8 +326,88 @@ export default function Home3() {
                         </div>
                     </div>
                 </div>
-            </section >
-            < footer className="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800" >
+            </section>
+
+            {/* Terminal Demo Section */}
+            <section className="py-10 bg-white dark:bg-gray-900 relative overflow-hidden min-h-screen flex items-center">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="text-center mb-8">
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                                See ChatFin in Action
+                            </h2>
+                            <p className="text-xl text-gray-600 dark:text-gray-300">
+                                Watch how simple financial operations become with natural language commands
+                            </p>
+                        </div>
+
+                        <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-300 dark:border-gray-700 shadow-2xl h-[90vh] flex flex-col">
+                            {/* Terminal Header */}
+                            {/* <div className="flex items-center px-6 py-4 bg-gray-100 dark:bg-gray-800 rounded-t-xl border-b border-gray-300 dark:border-gray-700 flex-shrink-0">
+                                <div className="flex space-x-2">
+                                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                                </div>
+                                <div className="flex-1 text-center">
+                                    <span className="text-gray-700 dark:text-gray-300 text-xl font-mono">ChatFin</span>
+                                </div>
+                            </div> */}
+
+                            {/* Terminal Content */}
+                            {/* <div className="flex-1 p-12 font-mono text-xl flex flex-col justify-start overflow-auto">
+                                <div className="text-[#135142] dark:text-green-400 mb-2">
+                                    <span className="terminal-cursor">|</span>
+                                </div>
+
+                                <div className="terminal-line opacity-0" style={{ animationDelay: '1s' }}>
+                                    <span className="text-gray-900 dark:text-white">Run my prepaid reconciliation for March 2025</span>
+                                </div>
+
+                                <div className="mt-8 space-y-4">
+                                    <div className="terminal-line opacity-0" style={{ animationDelay: '2s' }}>
+                                        <span className="text-blue-600 dark:text-blue-400">[INFO]</span> <span className="text-gray-700 dark:text-gray-300">Pulling invoices...</span>
+                                    </div>
+                                    <div className="terminal-line opacity-0" style={{ animationDelay: '3s' }}>
+                                        <span className="text-blue-600 dark:text-blue-400">[INFO]</span> <span className="text-gray-700 dark:text-gray-300">Pulling account balance (4678)...</span>
+                                    </div>
+                                    <div className="terminal-line opacity-0" style={{ animationDelay: '4s' }}>
+                                        <span className="text-blue-600 dark:text-blue-400">[INFO]</span> <span className="text-gray-700 dark:text-gray-300">Running prepaid template...</span>
+                                    </div>
+                                    <div className="terminal-line opacity-0" style={{ animationDelay: '5s' }}>
+                                        <span className="text-green-600 dark:text-green-400">[SUCCESS]</span> <span className="text-gray-700 dark:text-gray-300">Reconciliation complete.</span>
+                                    </div>
+                                    <div className="terminal-line opacity-0" style={{ animationDelay: '6s' }}>
+                                        <span className="text-yellow-600 dark:text-yellow-400">[WARN]</span> <span className="text-gray-700 dark:text-gray-300">47 mismatches found.</span>
+                                    </div>
+                                </div>
+
+                            </div> */}
+                        </div>
+
+                        <div className="text-center mt-8">
+                            <p className="text-gray-600 dark:text-gray-400 mb-8 text-lg">Ready to transform your financial operations?</p>
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                                <Button
+                                    onClick={handleGetStarted}
+                                    className="bg-[#135142] hover:bg-[#0f3d33] text-white px-10 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-lg"
+                                >
+                                    Get Started Free <ArrowRight className="ml-2 h-6 w-6" />
+                                </Button>
+                                <Button
+                                    variant="outline"
+                                    onClick={handleBookDemo}
+                                    className="border-2 border-gray-400 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white px-10 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
+                                >
+                                    <Play className="mr-2 h-6 w-6" /> Watch Demo
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer className="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="flex items-center mb-4 md:mb-0">
@@ -359,6 +439,14 @@ export default function Home3() {
           from { opacity: 0; transform: translateY(30px); }
           to { opacity: 1; transform: translateY(0); }
         }
+        @keyframes terminal-type {
+          from { opacity: 0; transform: translateX(-10px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes cursor-blink {
+          0%, 50% { opacity: 1; }
+          51%, 100% { opacity: 0; }
+        }
         .animate-float {
           animation: float 6s ease-in-out infinite;
         }
@@ -367,6 +455,16 @@ export default function Home3() {
         }
         .animate-fade-in {
           animation: fade-in 0.8s ease-out forwards;
+        }
+        .terminal-line {
+          animation: terminal-type 0.8s ease-out forwards;
+        }
+        .terminal-cursor {
+          animation: cursor-blink 1s infinite;
+        }
+        .terminal-cursor-final {
+          animation: cursor-blink 1s infinite;
+          animation-delay: 7s;
         }
       `}</style>
         </div >
