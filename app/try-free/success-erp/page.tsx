@@ -32,8 +32,8 @@ export default function TryFreeSuccessERP() {
         localStorage.removeItem('userCompany')
         localStorage.removeItem('hasERP')
 
-        // Redirect to dashboard
-        router.push('/dashboard')
+        // Redirect to main app or dashboard
+        router.push('/frontend')
     }
 
     return (
