@@ -144,20 +144,19 @@ export default function Home() {
 
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-              Where{" "}
+              AI Super Agent for{" "}
               <span className="bg-gradient-to-r from-[#135142] to-[#10b875] bg-clip-text text-transparent">
-                finance work
+                Finance and Accounting
               </span>{" "}
-              happens
+              Teams
             </h1>
 
             {/* Subheading */}
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 max-w-4xl mx-auto font-light">
-              One AI Super Agent for your whole finance team.
+              AI agents built to handle real work across Controllership, FP&A, AP, AR, Tax, Treasury and operations.
             </p>
             <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-              <strong className="text-[#135142] dark:text-green-400">Free </strong> for individuals.
-              Advanced features and enterprise integrations for growing teams.
+              <strong className="text-[#135142] dark:text-green-400">Get started free for individuals</strong> · Book a demo for teams
             </p>
 
             {/* CTA Buttons */}
@@ -369,6 +368,80 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Why ChatFin Section */}
+          <div className="max-w-7xl mx-auto mb-20">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
+                Why ChatFin?
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#135142] to-[#10b875] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Leader in Finance AI research</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  At the forefront of financial AI innovation, continuously advancing the capabilities of finance automation
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#135142] to-[#10b875] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Building2 className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Used by Fortune 500 finance teams</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Trusted by leading global companies to handle their most critical financial operations
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#135142] to-[#10b875] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Built with enterprise-grade security</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Bank-level encryption, SOC 2 compliance, and robust access controls to protect your financial data
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Capabilities Section */}
+          <div className="max-w-7xl mx-auto mb-20">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
+                Capabilities
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+              {[
+                { title: "Data Query", icon: BarChart3 },
+                { title: "AI Reconciliation", icon: CheckCircle },
+                { title: "Analytics", icon: TrendingUp },
+                { title: "Contract Compliance", icon: Shield },
+                { title: "Document Processing", icon: FileText },
+                { title: "AI OCR", icon: FileText },
+                { title: "Invoice Automation", icon: Receipt },
+                { title: "Payment Automation", icon: CreditCard },
+                { title: "Pattern Recognition", icon: Target },
+                { title: "Process Automation", icon: Zap }
+              ].map((capability, index) => (
+                <div key={index} className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-[#135142] dark:hover:border-green-400 transition-all duration-300 hover:shadow-lg text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#135142] to-[#10b875] rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <capability.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
+                    {capability.title}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* AI Finance Solutions Section */}
           <div className="max-w-7xl mx-auto mb-20">
             <div className="text-center mb-16">
@@ -486,6 +559,107 @@ export default function Home() {
                   </div>
                 </Link>
               ))}
+            </div>
+          </div>
+
+          {/* Testimonials Section */}
+          <div className="max-w-7xl mx-auto mb-20">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
+                What Our Customers Are Saying
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                <p className="text-gray-600 dark:text-gray-300 mb-6 italic">
+                  "Invoice processing went from hours to minutes. The AI accuracy is incredible."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-[#135142] to-[#10b875] rounded-full flex items-center justify-center text-white font-semibold">
+                    AP
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 dark:text-white">AP Manager</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Healthcare</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                <p className="text-gray-600 dark:text-gray-300 mb-6 italic">
+                  "Real-time insights that actually matter. Our financial decisions are now data-driven."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-[#135142] to-[#10b875] rounded-full flex items-center justify-center text-white font-semibold">
+                    C
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 dark:text-white">Controller</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">SaaS Startup</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                <p className="text-gray-600 dark:text-gray-300 mb-6 italic">
+                  "Contract compliance monitoring is now automated. We catch issues before they become problems."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-[#135142] to-[#10b875] rounded-full flex items-center justify-center text-white font-semibold">
+                    LO
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 dark:text-white">Legal Operations</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Fintech</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                <p className="text-gray-600 dark:text-gray-300 mb-6 italic">
+                  "ChatFin cut our month-end time by 40%. It's like having an additional employee that never sleeps."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-[#135142] to-[#10b875] rounded-full flex items-center justify-center text-white font-semibold">
+                    VP
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 dark:text-white">VP Finance</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Tech Company</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                <p className="text-gray-600 dark:text-gray-300 mb-6 italic">
+                  "The best part? Our team didn't need to learn a new system — ChatFin works where we work."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-[#135142] to-[#10b875] rounded-full flex items-center justify-center text-white font-semibold">
+                    CF
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 dark:text-white">CFO</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Retail Group</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                <p className="text-gray-600 dark:text-gray-300 mb-6 italic">
+                  "Invoice processing went from hours to minutes. The AI accuracy is incredible."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-[#135142] to-[#10b875] rounded-full flex items-center justify-center text-white font-semibold">
+                    AP
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 dark:text-white">AP Manager</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Healthcare</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
