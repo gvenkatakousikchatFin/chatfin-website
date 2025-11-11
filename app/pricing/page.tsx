@@ -4,17 +4,49 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Check, Shield, Zap, Building2, Users, TrendingUp, Globe } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "Pricing - ChatFin | Simple Pricing for Financial Workflows",
-    description: "Simple pricing for your financial workflows. Choose the plan that best meets your finance team's needs, with all the features you need to transform your financial operations. Free for individuals.",
-    keywords: "ChatFin pricing, finance AI pricing, AI finance tools cost, enterprise finance AI, free finance AI, AI accounting software pricing",
+    title: "Pricing Plans - ChatFin | AI Finance Solutions for Every Team Size",
+    description: "Transparent pricing for ChatFin's AI finance solutions. Free for individuals, scalable plans for teams and enterprises. Transform your financial operations with AI automation for FP&A, controllership, AP/AR, and more.",
+    keywords: [
+        "ChatFin pricing",
+        "finance AI pricing",
+        "AI finance tools cost",
+        "enterprise finance AI pricing",
+        "free finance AI",
+        "AI accounting software pricing",
+        "finance automation pricing",
+        "FP&A AI cost",
+        "controllership AI pricing",
+        "accounts payable automation pricing",
+        "financial planning AI cost",
+        "AI finance team pricing",
+        "enterprise finance automation",
+        "finance AI subscription",
+        "accounting AI plans",
+        "ChatFin cost",
+        "AI CFO tools pricing",
+        "finance workflow automation cost"
+    ],
     alternates: {
         canonical: "https://chatfin.ai/pricing"
     },
     openGraph: {
-        title: "Pricing - ChatFin | Simple Pricing for Financial Workflows",
-        description: "Simple pricing for your financial workflows. Free for individuals, advanced features for teams.",
+        title: "Pricing Plans - ChatFin | AI Finance Solutions for Every Team Size",
+        description: "Transparent pricing for ChatFin's AI finance solutions. Free for individuals, scalable plans for teams and enterprises.",
         url: "https://chatfin.ai/pricing",
-        type: "website"
+        type: "website",
+        images: [
+            {
+                url: "https://chatfin.ai/pricing-plans.png",
+                width: 1200,
+                height: 630,
+                alt: "ChatFin Pricing Plans"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Pricing Plans - ChatFin | AI Finance Solutions for Every Team Size",
+        description: "Transparent pricing for ChatFin's AI finance solutions. Free for individuals, scalable plans for teams and enterprises."
     }
 }
 

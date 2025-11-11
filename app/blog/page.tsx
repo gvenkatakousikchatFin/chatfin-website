@@ -4,17 +4,51 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Calendar, User, TrendingUp, BookOpen, Lightbulb, Target } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "Blog - ChatFin | AI Finance Insights & Newsletter",
-    description: "Stay ahead with AI insights, applications, and finance trends. Newsletter & insights on AI for finance, accounting automation, and financial technology innovations.",
-    keywords: "AI finance blog, finance AI insights, accounting AI trends, financial technology blog, AI finance newsletter, finance automation blog, AI accounting insights",
+    title: "AI Finance Blog & Insights - ChatFin | Expert Analysis & Trends",
+    description: "Expert insights on AI in finance and accounting. Discover the latest trends, best practices, and innovations in financial technology. Stay ahead with our comprehensive newsletter and analysis.",
+    keywords: [
+        "AI finance blog",
+        "finance AI insights",
+        "accounting AI trends",
+        "financial technology blog",
+        "AI finance newsletter",
+        "finance automation insights",
+        "AI accounting blog",
+        "finance AI best practices",
+        "financial AI trends",
+        "AI finance innovation",
+        "finance technology news",
+        "AI CFO insights",
+        "finance AI case studies",
+        "AI finance thought leadership",
+        "financial automation blog",
+        "AI finance strategy",
+        "finance AI research",
+        "financial AI analysis",
+        "finance AI expert insights",
+        "AI finance industry news"
+    ],
     alternates: {
         canonical: "https://chatfin.ai/blog"
     },
     openGraph: {
-        title: "Blog - ChatFin | AI Finance Insights & Newsletter",
-        description: "Stay ahead with AI insights, applications, and finance trends. Newsletter & insights on AI for finance and accounting.",
+        title: "AI Finance Blog & Insights - ChatFin | Expert Analysis & Trends",
+        description: "Expert insights on AI in finance and accounting. Discover the latest trends, best practices, and innovations in financial technology.",
         url: "https://chatfin.ai/blog",
-        type: "website"
+        type: "website",
+        images: [
+            {
+                url: "https://chatfin.ai/blog-hero.png",
+                width: 1200,
+                height: 630,
+                alt: "ChatFin AI Finance Blog"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "AI Finance Blog & Insights - ChatFin",
+        description: "Expert insights on AI in finance and accounting. Latest trends and best practices."
     }
 }
 

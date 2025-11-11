@@ -4,17 +4,56 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Building2, Users, TrendingUp, Shield, Globe, CheckCircle, BarChart3, FileText, Clock, Zap, Bot } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "AI Finance Solutions - ChatFin | Finance AI Tools & Automation",
-    description: "AI solutions that target specific pain points in financial operations. Streamline workflows, reduce manual tasks, and increase productivity with purpose-built AI agents for finance teams.",
-    keywords: "AI finance solutions, finance AI tools, AI for finance, finance automation, AI agents finance, controllership AI, FP&A AI, accounts payable AI, CFO AI tools, finance process automation",
+    title: "AI Finance Solutions & Automation - ChatFin | Transform Financial Operations",
+    description: "Comprehensive AI finance solutions designed for modern finance teams. Automate FP&A, controllership, AP/AR, tax, treasury operations. Reduce manual work, improve accuracy, and accelerate financial processes with intelligent AI agents.",
+    keywords: [
+        "AI finance solutions",
+        "finance AI tools",
+        "AI for finance teams",
+        "finance automation solutions",
+        "AI agents finance",
+        "controllership AI solutions",
+        "FP&A AI automation",
+        "accounts payable AI",
+        "accounts receivable automation",
+        "CFO AI tools",
+        "finance process automation",
+        "AI financial planning",
+        "automated financial reporting",
+        "AI month-end close",
+        "financial workflow automation",
+        "AI treasury management",
+        "automated tax compliance",
+        "financial data analysis AI",
+        "AI budget forecasting",
+        "finance team productivity",
+        "AI expense management",
+        "invoice automation AI",
+        "financial controls automation",
+        "AI financial insights",
+        "enterprise finance AI"
+    ],
     alternates: {
         canonical: "https://chatfin.ai/solutions"
     },
     openGraph: {
-        title: "AI Finance Solutions - ChatFin",
-        description: "AI solutions that target specific pain points in financial operations. Streamline workflows, reduce manual tasks, and increase productivity.",
+        title: "AI Finance Solutions & Automation - ChatFin | Transform Financial Operations",
+        description: "Comprehensive AI finance solutions designed for modern finance teams. Automate FP&A, controllership, AP/AR, tax, treasury operations with intelligent AI agents.",
         url: "https://chatfin.ai/solutions",
-        type: "website"
+        type: "website",
+        images: [
+            {
+                url: "https://chatfin.ai/finance-solutions.png",
+                width: 1200,
+                height: 630,
+                alt: "ChatFin AI Finance Solutions"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "AI Finance Solutions & Automation - ChatFin",
+        description: "Transform financial operations with AI solutions for FP&A, controllership, AP/AR, tax, and treasury."
     }
 }
 

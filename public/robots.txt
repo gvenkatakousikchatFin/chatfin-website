@@ -1,0 +1,43 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://chatfin.ai/sitemap.xml
+
+# Disallow specific paths for better crawl budget
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /temp/
+
+# Allow important paths
+Allow: /blog/
+Allow: /pricing/
+Allow: /solutions/
+Allow: /book-demo/
+Allow: /try-free/
+Allow: /get-started/
+
+# Crawl delay (optional - be generous to search engines)
+Crawl-delay: 1
+
+# Additional directives for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block common unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

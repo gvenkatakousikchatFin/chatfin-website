@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://chatfin.ai/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://chatfin.ai/chatfin-dashboard.png</image:loc>
+      <image:title>ChatFin AI Finance Dashboard</image:title>
+      <image:caption>Advanced AI Super Agent for Finance and Accounting Teams</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Pricing Page -->
+  <url>
+    <loc>https://chatfin.ai/pricing/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Solutions Page -->
+  <url>
+    <loc>https://chatfin.ai/solutions/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog Page -->
+  <url>
+    <loc>https://chatfin.ai/blog/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Tools for Accounting and Finance -->
+  <url>
+    <loc>https://chatfin.ai/ai-tools-for-accounting-and-finance/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Book Demo Pages -->
+  <url>
+    <loc>https://chatfin.ai/book-demo/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://chatfin.ai/book-demo/enterprise/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://chatfin.ai/book-demo/individual/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://chatfin.ai/book-demo/home1/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://chatfin.ai/book-demo/home2/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://chatfin.ai/book-demo/home3/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://chatfin.ai/book-demo/schedule/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://chatfin.ai/book-demo/confirmation/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Try Free Pages -->
+  <url>
+    <loc>https://chatfin.ai/try-free/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://chatfin.ai/try-free/step2/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://chatfin.ai/try-free/step3/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://chatfin.ai/try-free/success-erp/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chatfin.ai/try-free/redirect-demo/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Get Started Page -->
+  <url>
+    <loc>https://chatfin.ai/get-started/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Dashboard Page -->
+  <url>
+    <loc>https://chatfin.ai/dashboard/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Alternative Home Pages -->
+  <url>
+    <loc>https://chatfin.ai/home2/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://chatfin.ai/home3/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Coming Soon Page -->
+  <url>
+    <loc>https://chatfin.ai/coming-soon/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

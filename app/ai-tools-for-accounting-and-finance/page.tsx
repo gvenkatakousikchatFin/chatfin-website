@@ -4,17 +4,58 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, BarChart3, FileText, TrendingUp, CheckCircle, Zap, Bot, Shield, Globe, Building2 } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "AI Tools for Accounting & Finance - ChatFin | Best Finance AI Solutions 2025",
-    description: "AI-powered tools to automate accounting processes, enhance financial accuracy, and streamline bookkeeping for businesses. Discover the best AI tools for finance teams in 2025.",
-    keywords: "AI tools for accounting, AI finance tools, accounting AI software, finance automation tools, AI bookkeeping, financial AI solutions, accounting process automation, AI for CFOs, AI for controllers, AI for FP&A",
+    title: "Best AI Tools for Accounting & Finance 2025 - ChatFin | Complete Guide",
+    description: "Comprehensive guide to the best AI tools for accounting and finance teams. Discover AI-powered solutions for bookkeeping, financial analysis, expense management, invoice processing, and more. Transform your finance operations with intelligent automation.",
+    keywords: [
+        "AI tools for accounting",
+        "AI finance tools 2025",
+        "accounting AI software",
+        "finance automation tools",
+        "AI bookkeeping tools",
+        "financial AI solutions",
+        "accounting process automation",
+        "AI for CFOs",
+        "AI for controllers",
+        "AI for FP&A",
+        "best AI accounting software",
+        "AI invoice processing",
+        "AI expense management",
+        "financial planning AI tools",
+        "AI financial reporting",
+        "accounting AI automation",
+        "finance AI platforms",
+        "AI budget forecasting",
+        "AI financial analysis",
+        "automated accounting software",
+        "AI accounts payable",
+        "AI accounts receivable",
+        "AI tax preparation",
+        "financial AI assistants",
+        "accounting chatbots",
+        "AI financial dashboards",
+        "finance AI integration"
+    ],
     alternates: {
         canonical: "https://chatfin.ai/ai-tools-for-accounting-and-finance"
     },
     openGraph: {
-        title: "AI Tools for Accounting & Finance - ChatFin",
-        description: "AI-powered tools to automate accounting processes, enhance financial accuracy, and streamline bookkeeping for businesses.",
+        title: "Best AI Tools for Accounting & Finance 2025 - ChatFin | Complete Guide",
+        description: "Comprehensive guide to the best AI tools for accounting and finance teams. Discover AI-powered solutions for bookkeeping, financial analysis, and more.",
         url: "https://chatfin.ai/ai-tools-for-accounting-and-finance",
-        type: "website"
+        type: "website",
+        images: [
+            {
+                url: "https://chatfin.ai/ai-tools-guide.png",
+                width: 1200,
+                height: 630,
+                alt: "Best AI Tools for Accounting and Finance 2025"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Best AI Tools for Accounting & Finance 2025 - ChatFin",
+        description: "Complete guide to AI tools for accounting and finance teams. Transform your operations with intelligent automation."
     }
 }
 

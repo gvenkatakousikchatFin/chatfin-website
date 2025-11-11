@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Play, Building2, BarChart3, Zap, FileText, Receipt, CreditCard, Shield, Rocket, CheckCircle, Clock, Users, TrendingUp, DollarSign, Globe, Lock, Target, Bot, PieChart, Calendar } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useRouter } from "next/navigation"
-import Head from "next/head"
 import Link from "next/link"
 
 export default function Home() {
@@ -20,74 +19,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>ChatFin - AI Super Agent for Finance & Accounting Teams | Free AI Finance Tools</title>
-        <meta name="description" content="AI Super Agent for Finance and Accounting Teams. AI agents built to handle real work across Controllership, FP&A, AP, AR, Tax, Treasury and operations. Free for individuals, advanced features for teams." />
-        <meta name="keywords" content="AI finance, finance AI, accounting AI, AI for finance, AI for accounting, finance automation, accounting automation, AI agents finance, AI accountant, finance AI tools, accounting AI solutions, AI financial planning, AI reconciliation, AI invoice processing, AI expense management, financial AI assistant" />
-        <link rel="canonical" href="https://chatfin.ai/" />
-
-        {/* Open Graph tags */}
-        <meta property="og:title" content="ChatFin - AI Super Agent for Finance & Accounting Teams" />
-        <meta property="og:description" content="AI Super Agent for Finance and Accounting Teams. AI agents built to handle real work across Controllership, FP&A, AP, AR, Tax, Treasury and operations." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://chatfin.ai/" />
-        <meta property="og:image" content="https://chatfin.ai/chatfin-dashboard.png" />
-        <meta property="og:site_name" content="ChatFin" />
-
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@ChatFinAI" />
-        <meta name="twitter:title" content="ChatFin - AI Super Agent for Finance & Accounting Teams" />
-        <meta name="twitter:description" content="AI Super Agent for Finance and Accounting Teams. Free for individuals, advanced features for teams." />
-        <meta name="twitter:image" content="https://chatfin.ai/chatfin-dashboard.png" />
-
-        {/* Additional SEO tags */}
-        <meta name="author" content="ChatFin Inc" />
-        <meta name="robots" content="index,follow" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-        <meta name="distribution" content="global" />
-        <meta name="rating" content="general" />
-
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              "name": "ChatFin - AI Super Agent for Finance & Accounting Teams",
-              "description": "AI Super Agent for Finance and Accounting Teams. AI agents built to handle real work across Controllership, FP&A, AP, AR, Tax, Treasury and operations.",
-              "url": "https://chatfin.ai/",
-              "mainEntity": {
-                "@type": "SoftwareApplication",
-                "name": "ChatFin",
-                "description": "AI Super Agent for Finance and Accounting Teams",
-                "applicationCategory": "BusinessApplication",
-                "operatingSystem": "Web Browser",
-                "offers": {
-                  "@type": "Offer",
-                  "price": "0",
-                  "priceCurrency": "USD",
-                  "description": "Free for individuals"
-                }
-              },
-              "breadcrumb": {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://chatfin.ai/"
-                  }
-                ]
-              }
-            })
-          }}
-        />
-      </Head>
-
       <div className="min-h-screen bg-white dark:bg-gray-900 font-['Poppins',sans-serif]">
         {/* Navigation */}
         <header className="z-50 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 sticky top-0">
