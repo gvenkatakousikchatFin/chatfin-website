@@ -1,22 +1,8 @@
 {
   "name": "chatfin-website",
-  "main": "dist/index.js",
   "compatibility_date": "2025-11-11",
-  "assets": {
-    "directory": "./out"
-  },
-  "env": {
-    "production": {
-      "name": "chatfin-website-prod",
-      "assets": {
-        "directory": "./out"
-      }
-    },
-    "staging": {
-      "name": "chatfin-website-staging",
-      "assets": {
-        "directory": "./out"
-      }
-    }
+  "type": "javascript",
+  "site": {
+    "bucket": "./out"
   }
 }
