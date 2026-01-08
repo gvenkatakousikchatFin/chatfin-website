@@ -28,11 +28,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/placeholder.svg?height=40&width=150"
+                src="/chatfin-logo.png"
                 alt="ChatFin Logo"
-                width={150}
+                width={40}
                 height={40}
                 className="h-10 w-auto"
               />
@@ -41,41 +41,43 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-white hover:text-emerald-400 transition-colors">
+            <Link href="/" className="text-white hover:text-[#00E599] transition-colors font-medium">
               Home
             </Link>
 
             {/* Solutions Dropdown */}
             <div className="group relative">
-              <button className="flex items-center text-gray-400 group-hover:text-emerald-400 transition-colors focus:outline-none py-8">
+              <button className="flex items-center text-gray-300 group-hover:text-[#00E599] transition-colors focus:outline-none py-8 font-medium">
                 Solutions
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
 
               {/* Dropdown Menu */}
-              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[800px] hidden group-hover:block px-2 transform transition-all duration-200 ease-out origin-top-center">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] hidden group-hover:block px-2 pt-2 transform transition-all duration-200 ease-out origin-top-center">
                 {/* Invisible bridge to prevent mouse leaving */}
-                <div className="absolute -top-4 px-2 w-full h-4 bg-transparent"></div>
+                <div className="absolute -top-4 px-2 w-full h-8 bg-transparent"></div>
 
-                <div className="bg-[#0f1123] border border-gray-800 rounded-xl shadow-2xl p-6 grid grid-cols-2 gap-x-8 gap-y-6 relative overflow-hidden mt-0">
-                  {/* Background decoration */}
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-cyan-500"></div>
+                <div className="bg-[#0f1123] border border-gray-800 rounded-xl shadow-2xl overflow-hidden mt-2">
+                  {/* Header bar */}
+                  <div className="h-1 w-full bg-[#00E599]"></div>
 
-                  {/* List items */}
-                  {useCasesData.useCases.map((useCase, index) => (
-                    <Link
-                      key={index}
-                      href={`/solutions/${slugify(useCase.title)}`}
-                      className="block p-3 -mx-3 rounded-lg hover:bg-white/5 transition-colors group/item"
-                    >
-                      <div className="text-white font-semibold group-hover/item:text-emerald-400 transition-colors mb-1">
-                        {useCase.title}
-                      </div>
-                      <div className="text-sm text-gray-500 line-clamp-2">
-                        {useCase.preview}
-                      </div>
-                    </Link>
-                  ))}
+                  <div className="grid grid-cols-2 p-2">
+                    {/* List items */}
+                    {useCasesData.useCases.map((useCase, index) => (
+                      <Link
+                        key={index}
+                        href={`/solutions/${slugify(useCase.title)}`}
+                        className="block p-4 rounded-lg hover:bg-white/5 transition-all group/item"
+                      >
+                        <div className="text-white font-semibold text-sm group-hover/item:text-[#00E599] transition-colors mb-0.5">
+                          {useCase.title}
+                        </div>
+                        <div className="text-xs text-gray-500 line-clamp-1 group-hover/item:text-gray-400">
+                          {useCase.preview}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -86,7 +88,7 @@ export default function Navbar() {
             <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
               <Search className="h-5 w-5" />
             </Button>
-            <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-full">
+            <Button className="bg-gradient-to-r from-[#135142] to-[#10b875] hover:from-[#0d3b30] hover:to-[#0e9963] text-white rounded-full px-6 transition-all duration-300 font-medium">
               Book a demo
             </Button>
           </div>
@@ -122,13 +124,13 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white w-full rounded-full mt-4">
+              <Button className="bg-gradient-to-r from-[#135142] to-[#10b875] hover:from-[#0d3b30] hover:to-[#0e9963] text-white w-full rounded-full mt-4 font-medium" onClick={() => setIsMenuOpen(false)}>
                 Book a demo
               </Button>
             </nav>
           </div>
         </div>
       )}
-    </header>
+    </header >
   )
 }

@@ -35,7 +35,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
             {/* Hero Section */}
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f1123] to-[#0a0a14]">
                 <div className="max-w-7xl mx-auto text-center">
-                    <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium">
+                    <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-[#00E599]/30 bg-[#00E599]/10 text-[#00E599] text-sm font-medium">
                         {useCase.category.toUpperCase()}
                     </div>
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -45,7 +45,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
                         {useCase.description}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white rounded-full px-8 h-12 text-lg">
+                        <Button className="bg-gradient-to-r from-[#135142] to-[#10b875] hover:from-[#0d3b30] hover:to-[#0e9963] text-white rounded-full px-8 h-12 text-lg">
                             Get Started
                         </Button>
                         <Button variant="outline" className="border-gray-700 text-gray-300 hover:text-white hover:bg-white/5 rounded-full px-8 h-12 text-lg">
@@ -70,23 +70,21 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
                                 <div className="w-full lg:w-1/2">
                                     <div className="relative aspect-video rounded-2xl overflow-hidden border border-gray-800 bg-[#0f1123] shadow-2xl shadow-emerald-500/10 group hover:shadow-emerald-500/20 transition-all duration-300">
                                         <Image
-                                            src="https://i.postimg.cc/ZK1wzSbM/Screenshot-2026-01-08-192057.png"
+                                            src="https://i.postimg.cc/mrbLjKHh/Screenshot-2026-01-08-193412.png"
                                             alt={`Infographic for ${subCase.title}`}
                                             fill
-                                            className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                            className="object-cover"
+                                            priority={index === 0}
                                         />
-                                        {/* Overlay to ensure text readability if needed or just style */}
-                                        <div className="absolute inset-0 bg-gradient-to-tr from-[#0a0a14]/60 to-transparent"></div>
 
-                                        {/* Decorative elements */}
-                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent opacity-50"></div>
-                                        <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                                        <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl mix-blend-overlay"></div>
                                     </div>
                                 </div>
 
                                 {/* Content Side */}
                                 <div className="w-full lg:w-1/2">
-                                    <h3 className="text-emerald-400 font-semibold mb-2 text-lg">
+                                    <h3 className="text-[#00E599] font-semibold mb-2 text-lg">
                                         {subCase.preview}
                                     </h3>
                                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -98,20 +96,20 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
 
                                     <ul className="space-y-4">
                                         <li className="flex items-start">
-                                            <CheckCircle2 className="h-6 w-6 text-emerald-500 mr-3 flex-shrink-0 mt-0.5" />
+                                            <CheckCircle2 className="h-6 w-6 text-[#00E599] mr-3 flex-shrink-0 mt-0.5" />
                                             <span className="text-gray-300">Automated processing and verification</span>
                                         </li>
                                         <li className="flex items-start">
-                                            <CheckCircle2 className="h-6 w-6 text-emerald-500 mr-3 flex-shrink-0 mt-0.5" />
+                                            <CheckCircle2 className="h-6 w-6 text-[#00E599] mr-3 flex-shrink-0 mt-0.5" />
                                             <span className="text-gray-300">Real-time status updates and tracking</span>
                                         </li>
                                         <li className="flex items-start">
-                                            <CheckCircle2 className="h-6 w-6 text-emerald-500 mr-3 flex-shrink-0 mt-0.5" />
+                                            <CheckCircle2 className="h-6 w-6 text-[#00E599] mr-3 flex-shrink-0 mt-0.5" />
                                             <span className="text-gray-300">Seamless integration with existing tools</span>
                                         </li>
                                     </ul>
 
-                                    <Button variant="link" className="text-emerald-400 hover:text-emerald-300 p-0 h-auto mt-8 text-lg font-medium group">
+                                    <Button variant="link" className="text-[#00E599] hover:text-[#00c985] p-0 h-auto mt-8 text-lg font-medium group">
                                         Learn more <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                     </Button>
                                 </div>

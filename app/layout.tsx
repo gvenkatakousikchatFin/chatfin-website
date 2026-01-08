@@ -1,16 +1,16 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata, Viewport } from "next"
-import { Poppins } from "next/font/google"
+import { Montserrat } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar"
 import Script from "next/script"
 
-const poppins = Poppins({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-poppins",
+  variable: "--font-montserrat",
 })
 
 export const viewport: Viewport = {
@@ -505,7 +505,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${poppins.variable} font-sans antialiased`}>
+      <body className={`${montserrat.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
