@@ -22,8 +22,8 @@ export function generateStaticParams() {
     }))
 }
 
-export default function SolutionPage({ params }: { params: { slug: string } }) {
-    const { slug } = params
+export default async function SolutionPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params
     const useCase = useCasesData.useCases.find((u) => slugify(u.title) === slug)
 
     if (!useCase) {
