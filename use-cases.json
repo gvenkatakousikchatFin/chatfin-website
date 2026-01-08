@@ -1,0 +1,199 @@
+{
+  "sectionTitle": "All Finance Use Cases",
+  "useCases": [
+    {
+      "category": "accounting",
+      "title": "Reconciliations",
+      "preview": "Ensure accuracy and consistency in financial reporting",
+      "description": "Reconciliation is the process of comparing financial records (ledgers, statements, balances) to ensure accuracy, consistency, and completeness in reporting. It detects errors, discrepancies, and fraud, and is critical for financial integrity.",
+      "subUseCases": [
+        {
+          "title": "Bank Reconciliation",
+          "preview": "Match bank statements with internal records",
+          "description": "Automatically match bank statements with internal records to identify discrepancies, outstanding transactions, and ensure accurate cash positions."
+        },
+        {
+          "title": "Credit Card Reconciliation",
+          "preview": "Reconcile credit card transactions and statements",
+          "description": "Match credit card transactions with receipts and invoices, categorize expenses, and ensure all charges are properly recorded and authorized."
+        },
+        {
+          "title": "Intercompany Reconciliation",
+          "preview": "Balance transactions between related entities",
+          "description": "Ensure transactions between related entities are properly recorded and balanced across all subsidiary and parent company books."
+        },
+        {
+          "title": "Account Reconciliation",
+          "preview": "Verify general ledger account balances",
+          "description": "Verify general ledger account balances against supporting documentation, identify variances, and ensure accuracy of financial statements."
+        }
+      ]
+    },
+    {
+      "category": "accounting",
+      "title": "Accruals",
+      "preview": "Track revenues and expenses with precision timing",
+      "description": "Accruals refer to tracking revenues and expenses when they are earned or incurred, not when cash changes hands. Automating accruals reduces manual effort, errors, and improves auditability.",
+      "subUseCases": [
+        {
+          "title": "Predictive Accruals",
+          "preview": "AI-powered expense and revenue predictions",
+          "description": "Use AI and historical data to automatically predict and calculate accruals for utilities, rent, and other regular expenses that haven't been invoiced yet."
+        },
+        {
+          "title": "Purchase Order Accruals",
+          "preview": "Automate accruals for received but unbilled goods",
+          "description": "Automatically create accruals for goods received but not yet invoiced, ensuring accurate financial reporting by matching purchase orders with receipts."
+        },
+        {
+          "title": "Revenue Accruals",
+          "preview": "Track earned but unbilled revenue",
+          "description": "Automatically accrue revenue for services delivered or goods shipped but not yet invoiced, maintaining accurate revenue recognition."
+        },
+        {
+          "title": "Multi-Entity Accruals",
+          "preview": "Manage accruals across multiple entities",
+          "description": "Manage accruals across multiple legal entities and currencies with automatic consolidation and elimination entries for group reporting."
+        }
+      ]
+    },
+    {
+      "category": "analysis",
+      "title": "Flux Analysis",
+      "preview": "Evaluate and explain significant account variations",
+      "description": "Flux (variance) analysis evaluates and explains significant changes in financial accounts between periods to uncover drivers behind fluctuations.",
+      "subUseCases": [
+        {
+          "title": "Budget vs Actual Analysis",
+          "preview": "Compare planned vs actual performance",
+          "description": "Automatically analyze budget versus actual performance, identifying significant variances and providing detailed explanations for deviations."
+        },
+        {
+          "title": "Period-over-Period Analysis",
+          "preview": "Track changes across time periods",
+          "description": "Compare financial performance across different time periods, identifying trends and explaining month-over-month or year-over-year variations."
+        },
+        {
+          "title": "Trend Analysis",
+          "preview": "Identify patterns and forecast changes",
+          "description": "Analyze historical data to identify trends, seasonality patterns, and predict future financial performance with AI-driven insights."
+        }
+      ]
+    },
+    {
+      "category": "close",
+      "title": "Month-End Close",
+      "preview": "Streamline financial period consolidation",
+      "description": "Month-end close involves consolidating all financial activities for the period—reviewing ledgers, reconciling accounts, verifying transactions, and preparing statements for management.",
+      "subUseCases": [
+        {
+          "title": "Consolidated Close Checklists",
+          "preview": "Automated task tracking and completion",
+          "description": "Create and manage comprehensive close checklists with automated task tracking, dependency management, and real-time progress monitoring across teams."
+        },
+        {
+          "title": "AI-Driven Close",
+          "preview": "Intelligent automation for close process",
+          "description": "Leverage AI to predict close timeline, identify bottlenecks, automate journal entries, and provide intelligent recommendations for faster period close."
+        },
+        {
+          "title": "Data Consistency Checks",
+          "preview": "Automated validation across systems",
+          "description": "Automatically verify data consistency across all financial systems, detect anomalies, and ensure data integrity before finalizing the close."
+        }
+      ]
+    },
+    {
+      "category": "forecasting",
+      "title": "Monthly Forecasts",
+      "preview": "Predict future financial outcomes with AI precision",
+      "description": "Monthly forecasting estimates future financial outcomes based on past results, trends, and current data. AI tools automate data aggregation, scenario modelling, and variance analysis.",
+      "subUseCases": [
+        {
+          "title": "Scenario Planning",
+          "preview": "Model multiple financial outcomes",
+          "description": "Create and compare multiple financial scenarios (best case, worst case, most likely) with AI-powered modeling and sensitivity analysis."
+        },
+        {
+          "title": "Rolling Forecasts",
+          "preview": "Continuously updated projections",
+          "description": "Maintain dynamic forecasts that continuously update with new data, providing always-current projections for the next 12-18 months."
+        },
+        {
+          "title": "Trend Analysis",
+          "preview": "Historical pattern recognition",
+          "description": "Analyze historical data to identify trends, seasonal patterns, and growth trajectories to improve forecast accuracy."
+        }
+      ]
+    },
+    {
+      "category": "payables",
+      "title": "AP Validations",
+      "preview": "Ensure accurate supplier invoice processing",
+      "description": "AP validation ensures supplier invoices, payments, and purchase orders are matched correctly.",
+      "subUseCases": [
+        {
+          "title": "Supplier Statement Matching",
+          "preview": "Reconcile supplier statements automatically",
+          "description": "Automatically match supplier statements with AP records to identify discrepancies, missing invoices, and payment status."
+        },
+        {
+          "title": "Duplicate Invoice Detection",
+          "preview": "Prevent duplicate payments",
+          "description": "Use AI to detect and flag duplicate invoices before payment, preventing overpayment and maintaining vendor relationships."
+        },
+        {
+          "title": "Three-Way Match",
+          "preview": "Match PO, receipt, and invoice",
+          "description": "Automatically validate that purchase orders, goods receipts, and invoices match before approving payment."
+        }
+      ]
+    },
+    {
+      "category": "receivables",
+      "title": "AR Validations",
+      "preview": "Match customer payments with issued invoices",
+      "description": "AR validation matches customer payments and credit notes against issued invoices.",
+      "subUseCases": [
+        {
+          "title": "Receipt Matching",
+          "preview": "Auto-match payments to invoices",
+          "description": "Automatically match customer payments to outstanding invoices using AI-powered matching algorithms and payment references."
+        },
+        {
+          "title": "Under/Overpayment Detection",
+          "preview": "Identify payment discrepancies",
+          "description": "Detect and flag under or overpayments automatically, creating follow-up tasks and maintaining accurate AR aging reports."
+        },
+        {
+          "title": "Automated Reminders",
+          "preview": "Smart payment follow-ups",
+          "description": "Send automated, personalized payment reminders based on customer payment history and aging schedules."
+        }
+      ]
+    },
+    {
+      "category": "payments",
+      "title": "Payment Setup & Process",
+      "preview": "Automate payment methods and transaction processing",
+      "description": "Payment setup involves establishing payment methods, validating bank info, scheduling payments, and automating transactions.",
+      "subUseCases": [
+        {
+          "title": "Bank Setup & Validation",
+          "preview": "Secure bank account verification",
+          "description": "Set up and validate bank accounts with automated verification, ensuring secure payment processing and compliance."
+        },
+        {
+          "title": "Batch Payment Automation",
+          "preview": "Process multiple payments efficiently",
+          "description": "Automate batch payment processing with scheduling, approval workflows, and multi-currency support."
+        },
+        {
+          "title": "Compliance & Fraud Detection",
+          "preview": "Secure payment monitoring",
+          "description": "Monitor payments for fraud patterns, ensure regulatory compliance, and maintain audit trails for all transactions."
+        }
+      ]
+    }
+  ]
+}

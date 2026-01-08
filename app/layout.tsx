@@ -3,6 +3,7 @@ import "./globals.css"
 import type { Metadata, Viewport } from "next"
 import { Poppins } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
+import Navbar from "@/components/navbar"
 import Script from "next/script"
 
 const poppins = Poppins({
@@ -191,10 +192,10 @@ export default function RootLayout({
         <meta property="article:author" content="https://www.facebook.com/ChatFinAI" />
         <meta property="article:section" content="Technology" />
         <meta property="article:tag" content="AI Finance, Financial Technology, Accounting Automation" />
-        
+
         {/* LinkedIn Meta Tags */}
         <meta property="linkedin:owner" content="ChatFin Inc" />
-        
+
         {/* Pinterest Meta Tags */}
         <meta name="pinterest" content="nopin" />
 
@@ -258,7 +259,7 @@ export default function RootLayout({
                   "availableLanguage": "English"
                 },
                 {
-                  "@type": "ContactPoint", 
+                  "@type": "ContactPoint",
                   "contactType": "sales",
                   "url": "https://chatfin.ai/book-demo",
                   "availableLanguage": "English"
@@ -285,7 +286,7 @@ export default function RootLayout({
                     "priceCurrency": "USD"
                   },
                   {
-                    "@type": "Offer", 
+                    "@type": "Offer",
                     "itemOffered": {
                       "@type": "SoftwareApplication",
                       "name": "ChatFin Team",
@@ -322,7 +323,7 @@ export default function RootLayout({
               "featureList": [
                 "AI Financial Planning & Analysis (FP&A)",
                 "Automated Controllership Tasks",
-                "Accounts Payable Automation", 
+                "Accounts Payable Automation",
                 "Accounts Receivable Management",
                 "AI Tax Preparation & Compliance",
                 "Treasury Operations Automation",
@@ -435,7 +436,7 @@ export default function RootLayout({
                   {
                     "@type": "Offer",
                     "itemOffered": {
-                      "@type": "Service", 
+                      "@type": "Service",
                       "name": "AI Controllership Services",
                       "description": "Automated month-end close, financial reporting, and compliance"
                     }
@@ -507,10 +508,11 @@ export default function RootLayout({
       <body className={`${poppins.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
 

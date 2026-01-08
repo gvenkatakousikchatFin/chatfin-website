@@ -20,49 +20,9 @@ export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-white dark:bg-gray-900 font-['Poppins',sans-serif]">
-        {/* Navigation */}
-        <header className="z-50 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 sticky top-0">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
-              {/* Logo */}
-              <div className="flex items-center">
-                <Link href="/" aria-label="ChatFin Homepage">
-                  <h1 className="text-2xl font-bold text-[#135142] dark:text-white">ChatFin</h1>
-                </Link>
-              </div>
-
-              {/* Navigation Links */}
-              <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
-                <Link href="/" className="text-[#135142] dark:text-white hover:text-[#10b875] transition-colors text-sm font-medium border-b-2 border-[#135142] dark:border-white pb-1 relative group" aria-current="page">
-                  Home
-                </Link>
-                <Link href="/solutions" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
-                  Solutions
-                </Link>
-                <Link href="/pricing" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
-                  Pricing
-                </Link>
-                <Link href="/blog" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
-                  Blog
-                </Link>
-                <Link href="/ai-tools-for-accounting-and-finance" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
-                  AI Tools
-                </Link>
-                <Link href="/use-cases" className="text-gray-600 dark:text-gray-300 hover:text-[#135142] dark:hover:text-white transition-colors text-sm font-medium relative group">
-                  Use Cases
-                </Link>
-              </nav>
-
-              {/* Theme Toggle */}
-              <div className="flex items-center gap-4">
-                <ThemeToggle />
-              </div>
-            </div>
-          </div>
-        </header>
 
         {/* Main Content */}
-        <main className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20">
           {/* Hero Section */}
           <div className="text-center py-20 relative">
             {/* Freemium Badge */}
