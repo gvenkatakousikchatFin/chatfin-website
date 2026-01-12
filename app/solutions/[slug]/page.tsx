@@ -3,7 +3,47 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import useCasesData from '@/use-cases.json'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import {
+    ArrowRight, CheckCircle2, Clock, CreditCard, Users, BarChart3,
+    FileText, TrendingUp, CheckSquare, Zap, Shield, Wallet, AlertCircle,
+    Activity, Target, Calendar, Globe, Bell
+} from 'lucide-react'
+import { ChatFinDiagram } from '@/components/chatfin-diagram'
+
+// Icon mapping for different use case categories and types
+const getIconForSubUseCase = (title: string, mainCategory: string): React.ReactNode => {
+    const iconProps = { className: "h-12 w-12" }
+
+    const iconMap: Record<string, React.ReactNode> = {
+        'Bank Reconciliation': <Clock {...iconProps} />,
+        'Credit Card Reconciliation': <CreditCard {...iconProps} />,
+        'Intercompany Reconciliation': <Users {...iconProps} />,
+        'Account Reconciliation': <BarChart3 {...iconProps} />,
+        'Predictive Accruals': <TrendingUp {...iconProps} />,
+        'Purchase Order Accruals': <FileText {...iconProps} />,
+        'Revenue Accruals': <Wallet {...iconProps} />,
+        'Multi-Entity Accruals': <Globe {...iconProps} />,
+        'Budget vs Actual Analysis': <Target {...iconProps} />,
+        'Period-over-Period Analysis': <Calendar {...iconProps} />,
+        'Trend Analysis': <Activity {...iconProps} />,
+        'Consolidated Close Checklists': <CheckSquare {...iconProps} />,
+        'AI-Driven Close': <Zap {...iconProps} />,
+        'Data Consistency Checks': <Shield {...iconProps} />,
+        'Scenario Planning': <BarChart3 {...iconProps} />,
+        'Rolling Forecasts': <TrendingUp {...iconProps} />,
+        'Supplier Statement Matching': <FileText {...iconProps} />,
+        'Duplicate Invoice Detection': <AlertCircle {...iconProps} />,
+        'Three-Way Match': <CheckCircle2 {...iconProps} />,
+        'Receipt Matching': <FileText {...iconProps} />,
+        'Under/Overpayment Detection': <AlertCircle {...iconProps} />,
+        'Automated Reminders': <Bell {...iconProps} />,
+        'Bank Setup & Validation': <Shield {...iconProps} />,
+        'Batch Payment Automation': <Zap {...iconProps} />,
+        'Compliance & Fraud Detection': <AlertCircle {...iconProps} />,
+    }
+
+    return iconMap[title] || <CheckCircle2 {...iconProps} />
+}
 
 // Helper function to generate slugs from titles
 const slugify = (text: string) => {
@@ -56,19 +96,29 @@ export default async function SolutionPage({ params }: { params: Promise<{ slug:
             </section>
 
             {/* Alternating Sub-Use Cases */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto space-y-32">
+            <section className="py-32 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto space-y-48">
                     {useCase.subUseCases.map((subCase, index) => {
                         const isEven = index % 2 === 0
+                        const isFirstReconciliation = slug === 'reconciliations' && index === 0
+
+                        // For the diagram, use full width layout
+                        if (isFirstReconciliation) {
+                            return (
+                                <div key={index} className="w-full">
+                                    <ChatFinDiagram />
+                                </div>
+                            )
+                        }
 
                         return (
                             <div
                                 key={index}
-                                className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-20`}
+                                className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-16 lg:gap-28 min-h-[800px]`}
                             >
                                 {/* Infographic Side (Placeholder) */}
                                 <div className="w-full lg:w-1/2">
-                                    <div className="relative aspect-video rounded-2xl overflow-hidden border border-gray-800 bg-[#0f1123] shadow-2xl shadow-emerald-500/10 group hover:shadow-emerald-500/20 transition-all duration-300">
+                                    <div className="relative aspect-video rounded-2xl overflow-hidden border border-gray-800 bg-[#0f1123] shadow-2xl shadow-emerald-500/10 group hover:shadow-emerald-500/20 transition-all duration-300 h-[600px]">
                                         <Image
                                             src="https://i.postimg.cc/mrbLjKHh/Screenshot-2026-01-08-193412.png"
                                             alt={`Infographic for ${subCase.title}`}
@@ -84,33 +134,38 @@ export default async function SolutionPage({ params }: { params: Promise<{ slug:
 
                                 {/* Content Side */}
                                 <div className="w-full lg:w-1/2">
-                                    <h3 className="text-[#00E599] font-semibold mb-2 text-lg">
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="text-[#00E599] bg-[#00E599]/10 p-4 rounded-xl border border-[#00E599]/20">
+                                            {getIconForSubUseCase(subCase.title, useCase.category)}
+                                        </div>
+                                    </div>
+                                    <h3 className="text-[#00E599] font-semibold mb-3 text-xl">
                                         {subCase.preview}
                                     </h3>
-                                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
                                         {subCase.title}
                                     </h2>
-                                    <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                                    <p className="text-gray-300 text-xl leading-relaxed mb-10">
                                         {subCase.description}
                                     </p>
 
-                                    <ul className="space-y-4">
+                                    <ul className="space-y-5">
                                         <li className="flex items-start">
-                                            <CheckCircle2 className="h-6 w-6 text-[#00E599] mr-3 flex-shrink-0 mt-0.5" />
-                                            <span className="text-gray-300">Automated processing and verification</span>
+                                            <CheckCircle2 className="h-7 w-7 text-[#00E599] mr-4 flex-shrink-0 mt-1" />
+                                            <span className="text-gray-300 text-lg">Automated processing and verification</span>
                                         </li>
                                         <li className="flex items-start">
-                                            <CheckCircle2 className="h-6 w-6 text-[#00E599] mr-3 flex-shrink-0 mt-0.5" />
-                                            <span className="text-gray-300">Real-time status updates and tracking</span>
+                                            <CheckCircle2 className="h-7 w-7 text-[#00E599] mr-4 flex-shrink-0 mt-1" />
+                                            <span className="text-gray-300 text-lg">Real-time status updates and tracking</span>
                                         </li>
                                         <li className="flex items-start">
-                                            <CheckCircle2 className="h-6 w-6 text-[#00E599] mr-3 flex-shrink-0 mt-0.5" />
-                                            <span className="text-gray-300">Seamless integration with existing tools</span>
+                                            <CheckCircle2 className="h-7 w-7 text-[#00E599] mr-4 flex-shrink-0 mt-1" />
+                                            <span className="text-gray-300 text-lg">Seamless integration with existing tools</span>
                                         </li>
                                     </ul>
 
-                                    <Button variant="link" className="text-[#00E599] hover:text-[#00c985] p-0 h-auto mt-8 text-lg font-medium group">
-                                        Learn more <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                                    <Button variant="link" className="text-[#00E599] hover:text-[#00c985] p-0 h-auto mt-10 text-xl font-medium group">
+                                        Learn more <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                                     </Button>
                                 </div>
                             </div>

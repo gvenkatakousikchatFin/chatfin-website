@@ -45,6 +45,10 @@ export default function Navbar() {
               Home
             </Link>
 
+            <Link href="/usecase1" className="text-white hover:text-[#00E599] transition-colors font-medium">
+              Usecase1
+            </Link>
+
             {/* Solutions Dropdown */}
             <div className="group relative">
               <button className="flex items-center text-gray-300 group-hover:text-[#00E599] transition-colors focus:outline-none py-8 font-medium">

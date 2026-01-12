@@ -511,6 +511,7 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
+          storageKey="chatfin-theme"
         >
           <Navbar />
           {children}
