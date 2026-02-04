@@ -295,9 +295,11 @@ export default function Solutions() {
                     <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
                         Let us know what you are looking for
                     </p>
-                    <Button variant="outline" className="bg-white text-[#135142] border-white hover:bg-gray-100 px-8 py-4 rounded-xl text-lg font-semibold">
-                        Contact Sales
-                    </Button>
+                    <Link href="https://chatfin.ai/talk-to-us">
+                        <Button variant="outline" className="bg-white text-[#135142] border-white hover:bg-gray-100 px-8 py-4 rounded-xl text-lg font-semibold">
+                            Contact Sales
+                        </Button>
+                    </Link>
                 </div>
             </section>
         </div>

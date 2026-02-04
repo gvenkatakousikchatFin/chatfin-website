@@ -748,7 +748,7 @@ export default function Home() {
             <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8">
               <div className="text-center mb-4">
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">
-                  Visit us: <Link href="https://chatfin-website.vercel.app/" className="text-[#135142] dark:text-green-400 hover:underline">chatfin-website.vercel.app</Link>
+                  Visit us: <Link href="https://chatfin.ai/" className="text-[#135142] dark:text-green-400 hover:underline">chatfin.ai</Link> | <Link href="https://chatfin.ai/talk-to-us" className="text-[#135142] dark:text-green-400 hover:underline">Contact Us</Link>
                 </p>
               </div>
               <p className="text-gray-600 dark:text-gray-300 text-sm text-center">
