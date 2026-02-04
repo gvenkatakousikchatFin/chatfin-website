@@ -18,6 +18,8 @@ Allow: /solutions/
 Allow: /book-demo/
 Allow: /try-free/
 Allow: /get-started/
+Allow: /careers/
+Allow: /usecase1/
 
 # Crawl delay (optional - be generous to search engines)
 Crawl-delay: 1
@@ -32,12 +34,21 @@ Allow: /
 User-agent: Slurp
 Allow: /
 
-# Block common unwanted bots
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
+# Allow Moz crawlers for backlink indexing and domain authority
+User-agent: rogerbot
+Allow: /
 
 User-agent: DotBot
+Allow: /
+
+# Allow Ahrefs for backlink discovery
+User-agent: AhrefsBot
+Allow: /
+
+# Allow Semrush for SEO analysis
+User-agent: SemrushBot
+Allow: /
+
+# Block only truly unwanted bots
+User-agent: MJ12bot
 Disallow: /

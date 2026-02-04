@@ -55,17 +55,18 @@ export const metadata: Metadata = {
 export default function Blog() {
     const featuredPosts = [
         {
-            title: "USE AI LIKE IT IS YOUR JOB",
-            excerpt: "We are past the experiment phase. Don't wait for mandates. You know the problem already. You don't need a title to start using AI effectively in your finance role.",
-            link: "https://www.linkedin.com/newsletters/6983821196127584256/",
-            badge: "LATEST",
-            external: true
+            title: "The Agentic Finance Revolution: How ChatFin is Transforming Finance",
+            excerpt: "Discover how AI-powered agentic finance is changing the game. ChatFin's intelligent agents automate reconciliation, invoice processing, and forecasting - reducing manual work by 90%.",
+            link: "/blog/agentic-finance-revolution",
+            badge: "FEATURED",
+            external: false
         },
         {
-            title: "ARE FINANCE GENERALISTS MORE VALUABLE IN THE AI WORLD?",
-            excerpt: "AI makes generalists more powerful. You don't need to specialize to add value. Small teams can do big things with AI. Curiosity beats credentials in the AI era.",
-            link: "https://www.linkedin.com/posts/ashokman_aiworkflowintegration-financeautomation-aiproductivitygains-activity-7353826603572895746-3s6v",
-            external: true
+            title: "Complete Guide to AI Finance Automation in 2026",
+            excerpt: "Everything you need to know about AI finance automation. From implementation roadmaps to ROI calculations, learn how to transform your finance operations with ChatFin.",
+            link: "/blog/ai-finance-automation-guide",
+            badge: "NEW",
+            external: false
         }
     ]
 

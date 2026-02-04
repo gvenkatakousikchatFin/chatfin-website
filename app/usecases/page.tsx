@@ -120,9 +120,9 @@ const useCases = [
 
 export default function Usecase1Page() {
     return (
-        <div className="min-h-screen bg-[#0a0a14] pt-20">
+        <div className="min-h-screen bg-[#0a0a14] pt-20 overflow-x-hidden">
             {/* Hero Section */}
-            <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f1123] to-[#0a0a14] overflow-hidden">
+            <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f1123] to-[#0a0a14] overflow-hidden w-full">
                 <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
                 <div className="max-w-7xl mx-auto text-center relative z-10">
                     <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-[#00E599]/30 bg-[#00E599]/10 text-[#00E599] text-sm font-medium tracking-wide">
@@ -153,8 +153,8 @@ export default function Usecase1Page() {
 
             {/* Sticky Navigation / Table of Contents */}
             <section className="sticky top-20 z-40 bg-[#0a0a14]/95 backdrop-blur-md border-y border-gray-800 py-4 mb-16">
-                <div className="max-w-7xl mx-auto px-4 overflow-x-auto no-scrollbar">
-                    <div className="flex space-x-2 md:space-x-4 min-w-max">
+                <div className="w-full max-w-7xl mx-auto px-4 overflow-x-auto scrollbar-hide">
+                    <div className="flex space-x-2 md:space-x-4 w-max">
                         {useCases.map((useCase) => (
                             <Link
                                 key={useCase.id}
@@ -169,8 +169,8 @@ export default function Usecase1Page() {
             </section>
 
             {/* Use Cases List */}
-            <section className="pb-32 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto space-y-32">
+            <section className="pb-32 px-4 sm:px-6 lg:px-8 w-full overflow-hidden">
+                <div className="max-w-5xl mx-auto space-y-32 w-full">
                     {useCases.map((useCase) => (
                         <div key={useCase.id} className="scroll-mt-48" id={useCase.anchor}>
                             <div className="flex items-baseline gap-4 mb-8 border-b border-gray-800 pb-4">

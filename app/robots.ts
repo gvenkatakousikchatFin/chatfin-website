@@ -25,7 +25,32 @@ export default function robots(): MetadataRoute.Robots {
                 allow: '/',
             },
             {
-                userAgent: ['AhrefsBot', 'MJ12bot', 'DotBot'],
+                userAgent: 'Slurp',
+                allow: '/',
+            },
+            {
+                // Allow MozBot for backlink indexing and domain authority
+                userAgent: 'rogerbot',
+                allow: '/',
+            },
+            {
+                // Allow Moz's DotBot for link discovery
+                userAgent: 'DotBot',
+                allow: '/',
+            },
+            {
+                // Allow Ahrefs for backlink analysis
+                userAgent: 'AhrefsBot',
+                allow: '/',
+            },
+            {
+                // Allow Semrush for SEO analysis
+                userAgent: 'SemrushBot',
+                allow: '/',
+            },
+            {
+                // Block only truly unwanted bots
+                userAgent: 'MJ12bot',
                 disallow: '/',
             },
         ],

@@ -4,8 +4,9 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Search, ChevronDown } from "lucide-react"
+import { Menu, X, Search, ChevronDown, Sun, Moon } from "lucide-react"
 import { useMediaQuery } from "@/hooks/use-mobile"
+import { useTheme } from "next-themes"
 import useCasesData from "@/use-cases.json"
 
 // Helper function to generate slugs from titles
@@ -21,6 +22,7 @@ const slugify = (text: string) => {
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const isMobile = useMediaQuery("(max-width: 768px)")
+  const { theme, setTheme } = useTheme()
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a14]/90 backdrop-blur-md border-b border-gray-800/50">
@@ -45,8 +47,8 @@ export default function Navbar() {
               Home
             </Link>
 
-            <Link href="/usecase1" className="text-white hover:text-[#00E599] transition-colors font-medium">
-              Usecase1
+            <Link href="/usecases" className="text-white hover:text-[#00E599] transition-colors font-medium">
+              Use Cases
             </Link>
 
             {/* Solutions Dropdown */}
@@ -85,16 +87,30 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
+
+            <Link href="/careers" className="text-white hover:text-[#00E599] transition-colors font-medium">
+              Careers
+            </Link>
           </nav>
 
-          {/* Desktop CTA and Search */}
+          {/* Desktop CTA, Theme Toggle and Search */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
               <Search className="h-5 w-5" />
             </Button>
-            <Button className="bg-gradient-to-r from-[#135142] to-[#10b875] hover:from-[#0d3b30] hover:to-[#0e9963] text-white rounded-full px-6 transition-all duration-300 font-medium">
-              Book a demo
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-gray-400 hover:text-white"
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
+              {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
+            <Link href="/book-demo">
+              <Button className="bg-gradient-to-r from-[#135142] to-[#10b875] hover:from-[#0d3b30] hover:to-[#0e9963] text-white rounded-full px-6 transition-all duration-300 font-medium">
+                Book a demo
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -112,6 +128,9 @@ export default function Navbar() {
               <Link href="/" className="text-white py-2 hover:text-emerald-400 transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Home
               </Link>
+              <Link href="/usecases" className="text-white py-2 hover:text-emerald-400 transition-colors" onClick={() => setIsMenuOpen(false)}>
+                Use Cases
+              </Link>
               <div className="space-y-2">
                 <div className="text-gray-400 font-medium py-2">Solutions</div>
                 <div className="pl-4 space-y-2 border-l-2 border-gray-800 ml-1">
@@ -127,14 +146,31 @@ export default function Navbar() {
                   ))}
                 </div>
               </div>
+              <Link href="/careers" className="text-white py-2 hover:text-emerald-400 transition-colors" onClick={() => setIsMenuOpen(false)}>
+                Careers
+              </Link>
 
-              <Button className="bg-gradient-to-r from-[#135142] to-[#10b875] hover:from-[#0d3b30] hover:to-[#0e9963] text-white w-full rounded-full mt-4 font-medium" onClick={() => setIsMenuOpen(false)}>
-                Book a demo
-              </Button>
+              <div className="flex items-center gap-4 py-2">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-gray-400 hover:text-white"
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                >
+                  {theme === 'dark' ? <Sun className="h-5 w-5 mr-2" /> : <Moon className="h-5 w-5 mr-2" />}
+                  {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+                </Button>
+              </div>
+
+              <Link href="/book-demo" onClick={() => setIsMenuOpen(false)}>
+                <Button className="bg-gradient-to-r from-[#135142] to-[#10b875] hover:from-[#0d3b30] hover:to-[#0e9963] text-white w-full rounded-full mt-4 font-medium">
+                  Book a demo
+                </Button>
+              </Link>
             </nav>
           </div>
         </div>
       )}
-    </header >
+    </header>
   )
 }

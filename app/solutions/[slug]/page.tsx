@@ -71,9 +71,9 @@ export default async function SolutionPage({ params }: { params: Promise<{ slug:
     }
 
     return (
-        <div className="min-h-screen bg-[#0a0a14] pt-20">
+        <div className="min-h-screen bg-[#0a0a14] pt-20 overflow-x-hidden">
             {/* Hero Section */}
-            <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f1123] to-[#0a0a14]">
+            <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f1123] to-[#0a0a14] overflow-hidden">
                 <div className="max-w-7xl mx-auto text-center">
                     <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-[#00E599]/30 bg-[#00E599]/10 text-[#00E599] text-sm font-medium">
                         {useCase.category.toUpperCase()}
@@ -96,8 +96,8 @@ export default async function SolutionPage({ params }: { params: Promise<{ slug:
             </section>
 
             {/* Alternating Sub-Use Cases */}
-            <section className="py-32 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto space-y-48">
+            <section className="py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+                <div className="max-w-7xl mx-auto space-y-32">
                     {useCase.subUseCases.map((subCase, index) => {
                         const isEven = index % 2 === 0
                         const isFirstReconciliation = slug === 'reconciliations' && index === 0
@@ -114,11 +114,11 @@ export default async function SolutionPage({ params }: { params: Promise<{ slug:
                         return (
                             <div
                                 key={index}
-                                className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-16 lg:gap-28 min-h-[800px]`}
+                                className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-20`}
                             >
-                                {/* Infographic Side (Placeholder) */}
+                                {/* Infographic Side */}
                                 <div className="w-full lg:w-1/2">
-                                    <div className="relative aspect-video rounded-2xl overflow-hidden border border-gray-800 bg-[#0f1123] shadow-2xl shadow-emerald-500/10 group hover:shadow-emerald-500/20 transition-all duration-300 h-[600px]">
+                                    <div className="relative aspect-video rounded-2xl overflow-hidden border border-gray-800 bg-[#0f1123] shadow-2xl shadow-emerald-500/10 group hover:shadow-emerald-500/20 transition-all duration-300 max-h-[400px]">
                                         <Image
                                             src="https://i.postimg.cc/mrbLjKHh/Screenshot-2026-01-08-193412.png"
                                             alt={`Infographic for ${subCase.title}`}
@@ -139,32 +139,32 @@ export default async function SolutionPage({ params }: { params: Promise<{ slug:
                                             {getIconForSubUseCase(subCase.title, useCase.category)}
                                         </div>
                                     </div>
-                                    <h3 className="text-[#00E599] font-semibold mb-3 text-xl">
+                                    <h3 className="text-[#00E599] font-semibold mb-3 text-lg">
                                         {subCase.preview}
                                     </h3>
-                                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+                                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                                         {subCase.title}
                                     </h2>
-                                    <p className="text-gray-300 text-xl leading-relaxed mb-10">
+                                    <p className="text-gray-300 text-lg leading-relaxed mb-8">
                                         {subCase.description}
                                     </p>
 
-                                    <ul className="space-y-5">
+                                    <ul className="space-y-4">
                                         <li className="flex items-start">
-                                            <CheckCircle2 className="h-7 w-7 text-[#00E599] mr-4 flex-shrink-0 mt-1" />
-                                            <span className="text-gray-300 text-lg">Automated processing and verification</span>
+                                            <CheckCircle2 className="h-6 w-6 text-[#00E599] mr-3 flex-shrink-0 mt-1" />
+                                            <span className="text-gray-300">Automated processing and verification</span>
                                         </li>
                                         <li className="flex items-start">
-                                            <CheckCircle2 className="h-7 w-7 text-[#00E599] mr-4 flex-shrink-0 mt-1" />
-                                            <span className="text-gray-300 text-lg">Real-time status updates and tracking</span>
+                                            <CheckCircle2 className="h-6 w-6 text-[#00E599] mr-3 flex-shrink-0 mt-1" />
+                                            <span className="text-gray-300">Real-time status updates and tracking</span>
                                         </li>
                                         <li className="flex items-start">
-                                            <CheckCircle2 className="h-7 w-7 text-[#00E599] mr-4 flex-shrink-0 mt-1" />
-                                            <span className="text-gray-300 text-lg">Seamless integration with existing tools</span>
+                                            <CheckCircle2 className="h-6 w-6 text-[#00E599] mr-3 flex-shrink-0 mt-1" />
+                                            <span className="text-gray-300">Seamless integration with existing tools</span>
                                         </li>
                                     </ul>
 
-                                    <Button variant="link" className="text-[#00E599] hover:text-[#00c985] p-0 h-auto mt-10 text-xl font-medium group">
+                                    <Button variant="link" className="text-[#00E599] hover:text-[#00c985] p-0 h-auto mt-8 text-lg font-medium group">
                                         Learn more <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                                     </Button>
                                 </div>

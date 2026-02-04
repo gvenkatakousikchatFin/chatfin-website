@@ -170,12 +170,40 @@ export default function Home() {
 
               {/* Demo Right */}
               <div className="relative">
-                <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden">
-                  <img
-                    src="https://i.postimg.cc/cJGbtHG1/Navy-Geometric-Business-Webinar-Instagram-Post-8.png"
-                    alt="ChatFin Personal Dashboard"
-                    className="w-full h-[300px] object-cover"
-                  />
+                <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden p-8 border border-green-200 dark:border-gray-700">
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-4 p-4 bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+                      <div className="w-12 h-12 bg-gradient-to-r from-[#135142] to-[#10b875] rounded-lg flex items-center justify-center">
+                        <Receipt className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm text-gray-500 dark:text-gray-400">Expense Categorized</p>
+                        <p className="text-lg font-semibold text-gray-900 dark:text-white">$245.50 - Groceries</p>
+                      </div>
+                      <CheckCircle className="w-6 h-6 text-green-500" />
+                    </div>
+                    <div className="flex items-center gap-4 p-4 bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                        <PieChart className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm text-gray-500 dark:text-gray-400">Monthly Budget</p>
+                        <p className="text-lg font-semibold text-gray-900 dark:text-white">68% utilized</p>
+                      </div>
+                      <div className="w-16 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div className="w-2/3 h-full bg-blue-500 rounded-full"></div>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4 p-4 bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <Bot className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm text-gray-500 dark:text-gray-400">AI Insight</p>
+                        <p className="text-lg font-semibold text-gray-900 dark:text-white">"Save $120 this month"</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -186,12 +214,40 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Demo Left */}
               <div className="relative">
-                <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden">
-                  <img
-                    src="https://i.postimg.cc/cJGbtHG1/Navy-Geometric-Business-Webinar-Instagram-Post-8.png"
-                    alt="ChatFin Enterprise Dashboard"
-                    className="w-full h-[300px] object-cover"
-                  />
+                <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-2xl overflow-hidden p-8 border border-gray-200 dark:border-gray-700">
+                  <div className="space-y-6">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-700">
+                        <TrendingUp className="w-8 h-8 text-green-500 mb-2" />
+                        <p className="text-2xl font-bold text-gray-900 dark:text-white">$2.4M</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">Monthly Revenue</p>
+                      </div>
+                      <div className="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-700">
+                        <Users className="w-8 h-8 text-blue-500 mb-2" />
+                        <p className="text-2xl font-bold text-gray-900 dark:text-white">847</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">Active Users</p>
+                      </div>
+                    </div>
+                    <div className="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-700">
+                      <div className="flex items-center justify-between mb-3">
+                        <p className="font-semibold text-gray-900 dark:text-white">AI Reconciliation Status</p>
+                        <span className="text-xs bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-2 py-1 rounded-full">Live</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="flex-1 h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                          <div className="w-[92%] h-full bg-gradient-to-r from-[#135142] to-[#10b875] rounded-full"></div>
+                        </div>
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">92%</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4 p-4 bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+                      <Shield className="w-10 h-10 text-[#135142] dark:text-green-400" />
+                      <div>
+                        <p className="font-semibold text-gray-900 dark:text-white">SOC 2 Compliant</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">Enterprise-grade security</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
